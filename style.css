@@ -1,0 +1,596 @@
+.index-body {
+    background-color: #0a142d;
+    color: #3cff03;
+    text-align: center;
+    font-family: 'Glacial Indifference';
+    margin: 0; /* Remove default margin */
+    height: 100vh; /* Make the body fill the entire viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* MENU  */
+.menu {
+    display: flex;
+    justify-content: center; /* Center-align the menu horizontally */
+    background-color: #0a142d; /* Menu background color */
+    padding: 30px; /* Add some padding */
+    padding-top: 100px;
+    position: fixed; /* Fix the menu at the top */
+    top: 0px; /* Position 20px down from the top */
+    left: 0;
+    width: 100%; /* Make the menu span the full width of the page */
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+.menu-item {
+    margin: 0 30px; /* Space between menu items */
+}
+
+.menu a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 30px; /* Font size */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.menu a:hover {
+    color: #3cff03; /* Change color on hover */
+}
+
+
+ 
+.vision-container {
+    flex-grow: 1; /* Allow the vision container to take up the remaining space */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.vision-container p {
+    font-size: 35px;
+    margin: 0; /* Remove default margin */
+    padding: 0 200px; /* Add padding on the sides */
+    line-height: 70px;
+    color: #3cff03;
+}
+
+/* .vision-container .tagline { */
+    /* font-size: 25px; Slightly smaller font size for the tagline */
+    /* color: #3cff03; Text color for the tagline */
+    /* margin-top: 250px; Space above the tagline */
+    /* position: fixed; */
+
+/* } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+
+/* FOOTER STYLE  */
+.footer {
+    position: fixed;
+    bottom: 80px; /* Slightly up from the extreme bottom */
+    left: 100px; /* Slightly away from the extreme left */
+    color: #ffffff; /* Text color */
+    font-size: 20px; /* Adjust font size if needed */
+    font-family: 'Glacial Indifference', sans-serif; /* Font family */
+}
+
+
+
+/* Social Media Icons Styles for Homepage */
+.homepage-social-icons {
+    position: fixed;
+    bottom: 75px; /* Distance from the bottom of the viewport */
+    right: 100px; /* Distance from the left of the viewport */
+    display: flex;
+    gap: 50px; /* Space between social media icons */
+    background-color: #0a142d; /* Optional: background color for visibility */
+    padding: 10px;
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+.homepage-social-icon i {
+    font-size: 24px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.homepage-social-icon i:hover {
+    color: #3cff03;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contact Page */
+/* General body styles */
+.contact-body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0a142d;
+    color: #3cff03;
+    font-family: 'Glacial Indifference', sans-serif;
+}
+
+/* Contact form container */
+/* Contact form container */
+.contact-container {
+    background-color: #1c2336;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    margin-top: 100px; /* Adjust this value to move the container down */
+}
+
+
+/* Form title */
+.contact-container p {
+    margin-bottom: 40px;
+    color: #3cff03;
+    font-size: 35px;
+    font-weight: 500;
+    font-family: 'Glacial Indifference';
+}
+
+/* Form labels */
+.contact-form label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #3cff03;
+    text-align: left;
+}
+
+/* Input fields */
+.contact-form input[type="text"],
+.contact-form textarea {
+    width: calc(100% - 24px);  /* Adjusting for padding */
+    padding: 12px;
+    margin-bottom:20px;
+    border: 2px solid #3cff03;
+    border-radius: 10px;
+    background-color: #0a142d;
+    color: #ffffff;
+    font-size: 16px;
+    box-sizing: content-box; /* Ensuring padding and borders are included in width */
+}
+
+/* Placeholder alignment */
+.contact-form input[type="text"]::placeholder,
+.contact-form textarea::placeholder {
+    color: #ffffff;
+}
+
+/* Input focus state */
+.contact-form input[type="text"]:focus,
+.contact-form textarea:focus {
+    border-color: #ffffff;
+    outline: none;
+}
+
+/* Submit button */
+.contact-form button {
+    width: 20%;
+    padding: 10px;
+    background-color: #0a142d;
+    border: none;
+    border-radius: 8px;
+    color: #3cff03;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Submit button hover state */
+.contact-form button:hover {
+    background-color: #3cff03;
+    color: #0a142d;
+}
+
+
+
+/* Social Media Icons Styles for Contact Page */
+/* Social Media Icons Styles for Contact Page */
+.contact-page-social-icons {
+    position: fixed;
+    bottom: 30px; /* Distance from the bottom of the viewport */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for exact centering */
+    display: flex;
+    gap: 50px; /* Space between social media icons */
+    background-color: #0a142d; /* Background color for visibility */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+.contact-page-social-icon i {
+    font-size: 24px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.contact-page-social-icon i:hover {
+    color: #3cff03;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Styles */
+.spotlight-body {
+    background-color: #0a142d;
+    color: #3cff03;
+    font-family: 'Glacial Indifference', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* BLOG CONTAINER */
+.blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 150px 20px 50px; /* Adjust padding to account for fixed menu */
+    background-color: #0a142d;
+    margin-top: 80px; /* Add margin-top to create space between menu and blogs */
+    overflow-y: auto; /* Enable vertical scrolling */
+    width: 100%;
+    height: calc(100vh - 80px); /* Full viewport height minus the menu height */
+}
+
+/* BLOG POST */
+.blog-post {
+    background-color: #1c2336;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 calc(20% - 40px); /* 5 blog posts per row */
+}
+
+.blog-post img {
+    width: 100%;
+    height: 200px; /* Set the height for the blog images */
+    object-fit: cover; /* Ensure images fit well within the given height */
+    border-radius: 15px;
+}
+
+.blog-post p {
+    font-size: 24px;
+    margin: 15px 0;
+    color: #3cff03;
+}
+/* 
+.blog-post p {
+    font-size: 16px;
+    color: #ffffff;
+} */
+
+.blog-post .read-more {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3cff03;
+    color: #0a142d;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.blog-post .read-more:hover {
+    background-color: #0a142d;
+    color: #3cff03;
+}
+
+.blog-post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* PAGINATION */
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pagination a {
+    color: #3cff03;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid #3cff03;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #3cff03;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Styles */
+.postdetail-body {
+    background-color: #0a142d;
+    color: #ffffff;
+    font-family: 'Glacial Indifference', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+/* Post Detail Section */
+.post-detail {
+    max-width: 800px;
+    margin: 80px 20px;
+    padding: 60px 40px;
+    background-color: #1c2336;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.post-number {
+    font-size: 20px;
+    color: #3cff03;
+    font-weight: 500;
+    position: absolute;
+    top: 20px; /* Adjust this value as needed */
+    left: 20px;   /* Adjust this value as needed */
+}
+
+
+.post-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #3cff03;
+    text-align: center;
+}
+
+.post-date {
+    font-size: 16px;
+    color: #3cff03;
+    text-align: right;
+    position: absolute;
+    top: 10px; /* Adjust this value as needed */
+    right: 20px; /* Adjust this value as needed */
+}
+
+
+.post-image {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.post-content {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #ffffff;
+    text-align: justify;
+}
+/* 
+
+.post-content p {
+    margin-bottom: 2px;
+}  */
+
+/* Subheading Styles */
+.sub-heading {
+    font-size: 24px;
+    font-weight: 500;
+    color: #ffffff;
+    /* margin: 25px 0 10px; */
+    margin: 2px 0; /* Adjust space above and below */
+
+}
+
+.post-content p {
+    margin-top: 1px; /*Reduced margin between sub-heading and following paragraph */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* EXPERIENCE */
+
+/* General Styles */
+.coming-soon-body {
+    background-color: #0a142d;
+    color: #ffffff;
+    font-family: 'Glacial Indifference', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Coming Soon Container */
+.coming-soon-container {
+    max-width: 600px;
+    padding: 40px 20px;
+    background-color: #1c2336;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Coming Soon Title */
+.coming-soon-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #3cff03;
+}
+
+/* Coming Soon Text */
+.coming-soon-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PRODUCT */
+
+/* PRODUCT PAGE */
+
+/* General Styles */
+.product-body {
+    background-color: #0a142d;
+    color: #ffffff;
+    font-family: 'Glacial Indifference', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Product Container */
+.product-container {
+    max-width: 600px;
+    padding: 40px 20px;
+    background-color: #1c2336;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Product Title */
+.product-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #3cff03;
+}
+
+/* Product Description */
+.product-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+
+
+
