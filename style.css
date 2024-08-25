@@ -61,7 +61,7 @@
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
     .vision-container p {
-        font-size: 24px; /* Adjust font size for smaller screens */
+        font-size: 30px; /* Adjust font size for smaller screens */
         padding: 0 30px; /* Reduce padding on the sides */
         line-height: 50px; /* Adjust line height for better readability */
     }
@@ -261,7 +261,7 @@
 @media (max-width: 768px) {
     .homepage-social-icons {
         position: fixed;
-        bottom: 20px; /* Adjust positioning for mobile */
+        bottom: 40px; /* Adjust positioning for mobile */
         left: 50%; /* Center horizontally */
         transform: translateX(-50%); /* Center the icons */
         right: auto; /* Reset right positioning */
