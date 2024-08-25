@@ -261,7 +261,7 @@
 @media (max-width: 768px) {
     .homepage-social-icons {
         position: fixed;
-        bottom: 40px; /* Adjust positioning for mobile */
+        bottom: 60px; /* Adjust positioning for mobile */
         left: 50%; /* Center horizontally */
         transform: translateX(-50%); /* Center the icons */
         right: auto; /* Reset right positioning */
