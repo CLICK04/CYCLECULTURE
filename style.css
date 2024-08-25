@@ -56,6 +56,18 @@
     color: #3cff03;
 }
 
+
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .vision-container p {
+        font-size: 24px; /* Adjust font size for smaller screens */
+        padding: 0 30px; /* Reduce padding on the sides */
+        line-height: 50px; /* Adjust line height for better readability */
+    }
+}
+
+
 /* .vision-container .tagline { */
     /* font-size: 25px; Slightly smaller font size for the tagline */
     /* color: #3cff03; Text color for the tagline */
@@ -66,6 +78,118 @@
 
 
 
+
+
+
+
+
+
+
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+    display: none; /* Hidden on desktop */
+    position: fixed;
+    top: 15px;
+    right: 40px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1002;
+    color: white;
+}
+
+/* Sidebar (Position on the right side of the screen) */
+.sidebar {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 500px;
+    height: 100%;
+    background-color: #0a142d;
+    z-index: 1001;
+    padding-top: 80px; /* Create space for the toggle button */
+    transition: transform 0.3s ease; /* Smooth slide-in effect */
+    transform: translateX(100%); /* Initially hide off-screen */
+}
+
+/* Show the sidebar when the toggle is active */
+.sidebar.active {
+    display: block;
+    transform: translateX(0); /* Slide-in effect */
+}
+
+.sidebar.show {
+    transform: translateX(0); /* Slide in when active */
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align items to the right */
+    padding-top: 60px; /* Adjust padding to create space below the toggle */
+    padding-right: 20px; /* Align with the toggle */
+    position: relative; /* Make positioning relative to move content */
+    right: 20px; /* Move content 10px left */
+}
+
+.sidebar-item {
+    font-size: 24px;
+    line-height: 60px;
+}
+
+.sidebar-item a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sidebar-item a:hover {
+    color: #3cff03;
+}
+/* Mobile Page Title */
+.mobile-page-title {
+    display: none; /* Hidden by default */
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding: 0px;
+    position: fixed;
+    top: 150px;
+    left: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+/* Mobile Specific Styling */
+@media (max-width: 768px) {
+    .mobile-page-title {
+        display: block; /* Show the title on mobile */
+    }
+
+    .menu {
+        display: none; /* Hide the existing menu on mobile */
+    }
+
+    .sidebar-toggle {
+        display: block; /* Show toggle button on mobile */
+        margin-top: 60px; /* Push it down below the title */
+    }
+
+    .sidebar {
+        display: block; /* Sidebar is available on mobile */
+    }
+}
+
+/* Desktop Specific Styling */
+@media (min-width: 769px) {
+    .sidebar {
+        display: none; /* Sidebar hidden on desktop */
+    }
+
+    .mobile-page-title {
+        display: none; /* Hide the title on desktop */
+    }
+}
 
 
 
@@ -95,6 +219,17 @@
     font-family: 'Glacial Indifference', sans-serif; /* Font family */
 }
 
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .footer {
+        font-size: 14px; /* Smaller font size for mobile */
+        bottom: 30px; /* Positioning closer to the bottom */
+        padding: 0 10px; /* Reduce padding for smaller screens */
+        left: 50%; /* Ensure it's horizontally centered */
+        transform: translateX(-50%); /* Keep center alignment */
+    }
+}
 
 
 /* Social Media Icons Styles for Homepage */
