@@ -64,13 +64,6 @@
 
 /* } */
 
-@media screen and (max-width: 600px)
-{
-    font-size: 35px;
-    margin: 0; /* Remove default margin */
-    padding: 0 200px; /* Add padding on the sides */
-    line-height: 70px;
-    color: #3cff03;
 
 
 
