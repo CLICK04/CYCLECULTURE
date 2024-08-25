@@ -61,10 +61,9 @@
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
     .vision-container p {
-        font-size: 20px; /* Adjust font size for smaller screens */
+        font-size: 24px; /* Adjust font size for smaller screens */
         padding: 0 30px; /* Reduce padding on the sides */
         line-height: 50px; /* Adjust line height for better readability */
-        color: white;
     }
 }
 
@@ -85,17 +84,16 @@
 
 
 
-
 /* Sidebar Toggle Button */
 .sidebar-toggle {
     display: none; /* Hidden on desktop */
     position: fixed;
     top: 15px;
     right: 40px;
-    font-size: 40px;
+    font-size: 30px;
     cursor: pointer;
     z-index: 1002;
-    color: #3cff03;
+    color: white;
 }
 
 /* Sidebar (Position on the right side of the screen) */
@@ -134,20 +132,20 @@
 }
 
 .sidebar-item {
-    font-size: 36px;
+    font-size: 24px;
     line-height: 60px;
 }
 
 .sidebar-item a {
-    color: #3cff03;
+    color: white;
     text-decoration: none;
     transition: color 0.3s;
 }
 
-.sidebar-item a: click {
-    color: white;
+.sidebar-item a:hover {
+    color: #3cff03;
 }
-/* /* Mobile Page Title 
+/* Mobile Page Title */
 .mobile-page-title {
     display: none; /* Hidden by default */
     text-align: center;
@@ -159,7 +157,7 @@
     left: 0;
     width: 100%;
     z-index: 1001;
-} */
+}
 
 /* Mobile Specific Styling */
 @media (max-width: 768px) {
