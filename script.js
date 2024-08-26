@@ -1,4 +1,3 @@
-// script.js
-document.querySelector('.sidebar-toggle').addEventListener('click', function() {
-    document.querySelector('.sidebar').classList.toggle('show');
-});
+function toggleSidebar() {
+    document.querySelector('.sidebar').classList.toggle('active');
+}
