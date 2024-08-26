@@ -263,6 +263,7 @@
         font-size: 14px; /* Smaller font size for mobile */
         bottom: 30px; /* Adjust positioning to be closer to the bottom */
         padding: 0 10px; /* Reduce padding for smaller screens */
+        left: 50%;
     }
 }
 
