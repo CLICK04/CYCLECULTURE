@@ -256,16 +256,20 @@
     font-family: 'Glacial Indifference', sans-serif; /* Font family */
 }
 
-
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     .footer {
         font-size: 14px; /* Smaller font size for mobile */
-        bottom: 30px; /* Adjust positioning to be closer to the bottom */
+        bottom: 30px; /* Position 10px above the bottom */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Adjust positioning to center */
+        text-align: center; /* Center text */
+        width: 100%; /* Take up full width */
         padding: 0 10px; /* Reduce padding for smaller screens */
-        left: 50%;
     }
 }
+
+
 
 
 
