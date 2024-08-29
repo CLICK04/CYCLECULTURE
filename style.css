@@ -1,82 +1,220 @@
+/* General Body Styles */
 .index-body {
-    background-color: #0a142d;
-    color: #3cff03;
-    text-align: center;
-    font-family: 'Glacial Indifference';
     margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: 'Glacial Indifference', sans-serif;
     height: 100vh; /* Make the body fill the entire viewport height */
     display: flex;
     flex-direction: column;
 }
 
 
-/* MENU  */
-.menu {
-    display: flex;
-    justify-content: center; /* Center-align the menu horizontally */
-    background-color: #0a142d; /* Menu background color */
-    padding: 30px; /* Add some padding */
-    padding-top: 100px;
-    position: fixed; /* Fix the menu at the top */
-    top: 0px; /* Position 20px down from the top */
-    left: 0;
-    width: 100%; /* Make the menu span the full width of the page */
-    z-index: 1000; /* Ensure it stays on top of other content */
-}
+/* Vision Container Styles */
 
-.menu-item {
-    margin: 0 30px; /* Space between menu items */
-}
-
-.menu a {
-    color: white; /* Text color */
-    text-decoration: none; /* Remove underline */
-    font-size: 30px; /* Font size */
-    transition: color 0.3s; /* Smooth transition for hover effect */
-}
-
-.menu a:hover {
-    color: #3cff03; /* Change color on hover */
-}
-
-.vision-container {
-    flex-grow: 1;
+/* Hero Section with Full-Size Background Image */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full height */
+    background-image: url(9.jpg); /* Replace with your image path */
+    background-size: cover; /* Ensure image covers the whole section */
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
-    background: linear-gradient(135deg, #0a142d, #1c2336); /* Gradient background */
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    margin: 20px;
-    text-align: center; /* Center-align text */
+    overflow: hidden;
 }
 
-.vision-container p {
-    font-size: 35px;
-    margin: 0;
-    padding: 20px 50px;
-    line-height: 1.4;
-    color: #3cff03;
-    letter-spacing: 1.5px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+@media (max-width: 768px) {
+    .hero-section {
+        height: 100vh; /* Full height for mobile as well */
+    }
 }
+
+/* Overlay with Brand Colors */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 20, 45, 0.7); /* Semi-transparent overlay */
+    z-index: 1; /* Place above the image, below the content */
+}
+
+
+
+
+
+
+/* Vision Container */
+.vision-container {
+    position: fixed;
+    z-index: 2; /* Place above the overlay */
+    text-align: center;
+    color: #ffffff;
+    width: 100%; /* Ensure the container spans the full width */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the container horizontally and vertically */
+    padding: 20px;
+}
+
+/* Vision Heading */
+.vision-heading {
+    font-size: 100px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px; /* Space between heading and text */
+}
+
+/* Vision Text */
+.vision-text {
+    font-size: 30px;
+    line-height: 1.6;
+    margin: 20px 0;
+    max-width: 100%; /* Adjust to control wrapping */
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    padding: 0 20px;
+    margin-bottom: 20px; /* Space between text and subheading */
+}
+
+/* Vision Subheading */
+.vision-subheading {
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-style: normal;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Handle the line break for small devices */
+.line-break {
+    display: inline; /* Default to showing the line break */
+}
+
+
+
 
 /* Responsive Design for Mobile */
+
 @media (max-width: 768px) {
-    .vision-container {
-        padding: 30px 20px; /* Reduce padding on mobile */
-        margin: 10px; /* Reduce margin for better fit */
-        border-radius: 10px; /* Smaller border-radius for mobile */
+    .vision-heading {
+        font-size: 40px;
+        margin-bottom: 10px; /* Reduced spacing for mobile devices */
     }
 
-    .vision-container p {
-        font-size: 20px; /* Smaller font size for mobile */
-        padding: 10px 20px; /* Further reduce padding */
-        line-height: 1.3; /* Adjust line-height for readability */
-        letter-spacing: 1px; /* Slightly reduced letter spacing */
+    .vision-text {
+        font-size: 16px;
+        line-height: 1.2; /* Tighter line height for mobile devices */
+        margin-top: 0;
+    }
+    .line-break {
+        display: none; /* Hide the line break on small devices */
     }
 }
+
+
+
+
+
+.homepage-social-icon {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: #ffffff; /* White color by default */
+    transition: color 0.3s;
+    background: none; /* No background color */
+}
+
+.homepage-social-icon:hover {
+    color: #3cff03; /* Green branding color on hover */
+}
+
+.homepage-social-icons {
+    position: absolute;
+    bottom: 20px;
+    z-index: 3; /* Ensure it stays above the overlay */
+    background: none; /* Ensure no background color */
+    padding: 0; /* Remove any default padding */
+    margin: 0; /* Remove any default margin */
+}
+
+.homepage-social-icon::before,
+.homepage-social-icon::after {
+    content: none; /* Ensure no extra content */
+}
+
+/* Desktop: Align to the right */
+@media (min-width: 769px) {
+    .homepage-social-icons {
+        right: 20px; /* Align to the right side */
+    }
+}
+
+/* Mobile: Center horizontally */
+@media (max-width: 768px) {
+    .homepage-social-icons {
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%);
+        right: auto; /* Remove right alignment */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    position: fixed;
+    bottom: 60px;
+    left: 60px; /* Align to the left */
+    z-index: 3; /* Ensure it stays above the overlay */
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        left: 50%; /* Center horizontally on mobile */
+        transform: translateX(-50%);
+        text-align: center;
+        bottom: 20px;
+    }
+}
+
+
+/* Sidebar and Toggle Button are unchanged */
+
 
 
 
@@ -243,91 +381,6 @@
 
 
 
-/* FOOTER */
-
-
-/* FOOTER STYLE  */
-.footer {
-    position: fixed;
-    bottom: 80px; /* Slightly up from the extreme bottom */
-    left: 100px; /* Slightly away from the extreme left */
-    color: #ffffff; /* Text color */
-    font-size: 20px; /* Adjust font size if needed */
-    font-family: 'Glacial Indifference', sans-serif; /* Font family */
-}
-
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-    .footer {
-        font-size: 14px; /* Smaller font size for mobile */
-        bottom: 30px; /* Position 10px above the bottom */
-        left: 50%; /* Center horizontally */
-        transform: translateX(-50%); /* Adjust positioning to center */
-        text-align: center; /* Center text */
-        width: 100%; /* Take up full width */
-        padding: 0 10px; /* Reduce padding for smaller screens */
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Social Media Icons Styles for Homepage */
-.homepage-social-icons {
-    position: fixed;
-    bottom: 75px; /* Distance from the bottom of the viewport */
-    right: 100px; /* Distance from the left of the viewport */
-    display: flex;
-    gap: 50px; /* Space between social media icons */
-    background-color: #0a142d; /* Optional: background color for visibility */
-    padding: 10px;
-    border-radius: 5px; /* Optional: rounded corners */
-}
-
-.homepage-social-icon i {
-    font-size: 24px;
-    color: #ffffff;
-    transition: color 0.3s ease;
-}
-
-.homepage-social-icon i:hover {
-    color: #3cff03;
-}
-
-
-
-
-
-/* Responsive Design for Mobile */
-@media (max-width: 768px) {
-    .homepage-social-icons {
-        position: fixed;
-        bottom: 60px; /* Adjust positioning for mobile */
-        left: 50%; /* Center horizontally */
-        transform: translateX(-50%); /* Center the icons */
-        right: auto; /* Reset right positioning */
-        gap: 20px; /* Adjust space between icons for mobile */
-    }
-}
-
-
-
-
-
 
 
 
@@ -433,12 +486,12 @@
 /* Social Media Icons Styles for Contact Page */
 .contact-page-social-icons {
     position: fixed;
-    bottom: 30px; /* Distance from the bottom of the viewport */
+    bottom: 50px; /* Distance from the bottom of the viewport */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust for exact centering */
     display: flex;
     gap: 50px; /* Space between social media icons */
-    background-color: #0a142d; /* Background color for visibility */
+    background-color: none; /* Background color for visibility */
     padding: 10px;
     border-radius: 5px; /* Rounded corners */
     z-index: 1000; /* Ensure it stays on top of other content */
