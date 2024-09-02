@@ -1,4 +1,3 @@
-/* General Body Styles */
 .index-body {
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
@@ -6,46 +5,25 @@
     height: 100vh; /* Make the body fill the entire viewport height */
     display: flex;
     flex-direction: column;
+    background-color: #0a142d;
+    background-image: url(111.jpg); /* Add your background image here */
+    background-size: cover; /* Ensure the background image covers the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Optional: Keep the background fixed when scrolling */
+    position: relative; /* To contain the overlay */
 }
 
-
-/* Vision Container Styles */
-
-/* Hero Section with Full-Size Background Image */
-.hero-section {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Full height */
-    background-image: url(9.jpg); /* Replace with your image path */
-    background-size: cover; /* Ensure image covers the whole section */
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-@media (max-width: 768px) {
-    .hero-section {
-        height: 100vh; /* Full height for mobile as well */
-    }
-}
-
-/* Overlay with Brand Colors */
+/* Overlay */
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(10, 20, 45, 0.7); /* Semi-transparent overlay */
-    z-index: 1; /* Place above the image, below the content */
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust the color and opacity as needed */
+    z-index: 1; /* Ensure it sits below the vision container */
 }
-
-
-
-
-
 
 /* Vision Container */
 .vision-container {
@@ -68,6 +46,7 @@
     letter-spacing: 5px;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px; /* Space between heading and text */
+    color: #ffffff;
 }
 
 /* Vision Text */
@@ -81,6 +60,7 @@
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     padding: 0 20px;
     margin-bottom: 20px; /* Space between text and subheading */
+    color: #ffffff;
 }
 
 /* Vision Subheading */
@@ -99,6 +79,7 @@
 
 
 
+
 /* Responsive Design for Mobile */
 
 @media (max-width: 768px) {
@@ -106,79 +87,22 @@
         font-size: 40px;
         margin-bottom: 10px; /* Reduced spacing for mobile devices */
     }
-
     .vision-text {
-        font-size: 16px;
-        line-height: 1.2; /* Tighter line height for mobile devices */
+        font-size: 20px;
+        line-height: 1.4; /* Tighter line height for mobile devices */
         margin-top: 0;
+        text-align: justify; /* Justify the text */
+        text-justify: inter-word; /* Distribute words evenly */
+        text-align-last: center; /* Center the last line to avoid awkward spacing */
+        hyphens: auto; /* Enable hyphenation to reduce large gaps */
+        word-spacing: -1px; /* Adjust word spacing if needed */
+        padding: 0 20px; /* Ensure there's some padding to avoid text touching edges */
     }
+    
     .line-break {
         display: none; /* Hide the line break on small devices */
     }
 }
-
-
-
-
-
-.homepage-social-icon {
-    margin: 0 10px;
-    font-size: 1.5rem;
-    color: #ffffff; /* White color by default */
-    transition: color 0.3s;
-    background: none; /* No background color */
-}
-
-.homepage-social-icon:hover {
-    color: #3cff03; /* Green branding color on hover */
-}
-
-.homepage-social-icons {
-    position: absolute;
-    bottom: 20px;
-    z-index: 3; /* Ensure it stays above the overlay */
-    background: none; /* Ensure no background color */
-    padding: 0; /* Remove any default padding */
-    margin: 0; /* Remove any default margin */
-}
-
-.homepage-social-icon::before,
-.homepage-social-icon::after {
-    content: none; /* Ensure no extra content */
-}
-
-/* Desktop: Align to the right */
-@media (min-width: 769px) {
-    .homepage-social-icons {
-        right: 20px; /* Align to the right side */
-    }
-}
-
-/* Mobile: Center horizontally */
-@media (max-width: 768px) {
-    .homepage-social-icons {
-        left: 50%; /* Center horizontally */
-        transform: translateX(-50%);
-        right: auto; /* Remove right alignment */
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -258,6 +182,7 @@
     transform: translateX(0); /* Slide in when active */
 }
 
+
 /* Sidebar content styling */
 .sidebar-content {
     display: flex;
@@ -266,6 +191,7 @@
     padding: 20px;
     font-family: 'Glacial Indifference', sans-serif;
     color: #ffffff;
+    text-align: left; /* Ensure text is aligned to the left */
 }
 
 /* Sidebar item styling */
@@ -294,8 +220,8 @@
 /* Toggle Button Styling */
 .sidebar-toggle {
     position: fixed;
-    top: 80px;
-    right: 20px;
+    top: 100px;
+    right: 100px;
     z-index: 1002; /* Above the sidebar */
     background-color: #3cff03;
     color: #0a142d;
@@ -343,8 +269,8 @@
     }
 
     .sidebar-toggle {
-        top: 20px;
-        right: 20px;
+        top: 80px;
+        right: 50px;
     }
 
     .sidebar-content {
@@ -358,21 +284,6 @@
         display: none; /* Hide the title on desktop */
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -412,7 +323,7 @@
     max-width: 500px;
     width: 100%;
     text-align: center;
-    margin-top: 100px; /* Adjust this value to move the container down */
+    margin-top: 30px; /* Adjust this value to move the container down */
 }
 
 
@@ -506,10 +417,6 @@
 .contact-page-social-icon i:hover {
     color: #3cff03;
 }
-
-
-
-
 
 
 
@@ -643,16 +550,6 @@
     background-color: #3cff03;
     color: #fff;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -862,7 +759,3 @@
     line-height: 1.6;
     color: #cccccc;
 }
-
-
-
-
