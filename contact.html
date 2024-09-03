@@ -12,7 +12,7 @@
 <body class="contact-body">
     <div class="contact-container">
         <p>You can write to us here!</p>
-        <form class="contact-form">
+        <form class="contact-form" id="contactForm" method="POST" action="send_email.php">
             <label for="contact">Email or Number</label>
             <input type="text" id="contact" name="contact" placeholder="Your email or phone number" required>
 
@@ -21,8 +21,10 @@
 
             <button type="submit">Submit</button>
         </form>
+        <!-- Message Display -->
+        <div id="formMessage" style="margin-top: 20px;"></div>
     </div>
-
+</body>
 
 
 
