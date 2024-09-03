@@ -12,7 +12,7 @@
 <body class="contact-body">
     <div class="contact-container">
         <p>You can write to us here!</p>
-        <form class="contact-form" id="contactForm" method="POST" action="send_email.php">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/{your-form-id}" method="POST">
             <label for="contact">Email or Number</label>
             <input type="text" id="contact" name="contact" placeholder="Your email or phone number" required>
 
@@ -21,10 +21,12 @@
 
             <button type="submit">Submit</button>
         </form>
-        <!-- Message Display -->
-        <div id="formMessage" style="margin-top: 20px;"></div>
+        <p id="formResponse" style="display:none;"></p>
     </div>
+    
+    <script src="path/to/your/script.js"></script>
 </body>
+
 
 
 
