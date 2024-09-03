@@ -3,25 +3,32 @@ function toggleSidebar() {
     document.querySelector('.sidebar').classList.toggle('active');
 }
 
-// New function for AJAX form submission
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the form from submitting the traditional way
 
-    // Collect form data
-    var formData = new FormData(this);
 
-    // Send the form data via AJAX
-    fetch('send_email.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.text())
-    .then(data => {
-        // Display the response message
-        document.getElementById('formMessage').innerHTML = data;
-    })
-    .catch(error => {
-        // Display an error message
-        document.getElementById('formMessage').innerHTML = "<p style='color: red; font-family: Glacial Indifference; text-align: center;'>Oops! Something went wrong. Please try again later.</p>";
+document.querySelector('.contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const form = event.target;
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            form.reset();
+            document.getElementById('formResponse').textContent = "Thank you for your message, we have been informed.";
+            document.getElementById('formResponse').style.color = "#3cff03";
+        } else {
+            document.getElementById('formResponse').textContent = "Oops! Something went wrong. Please try again later.";
+            document.getElementById('formResponse').style.color = "red";
+        }
+        document.getElementById('formResponse').style.display = "block";
+    }).catch(error => {
+        document.getElementById('formResponse').textContent = "Oops! Something went wrong. Please try again later.";
+        document.getElementById('formResponse').style.color = "red";
+        document.getElementById('formResponse').style.display = "block";
     });
 });
