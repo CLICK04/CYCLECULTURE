@@ -54,7 +54,7 @@
     font-size: 25px;
     line-height: 1.4;
     margin: 0 auto; /* Centers the text */
-    max-width: 80%; /* Controls text width, creating space on both sides */
+    max-width: 100%; /* Controls text width, creating space on both sides */
     text-align: justify;
     letter-spacing: 2px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
