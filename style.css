@@ -54,7 +54,7 @@
     font-size: 30px;
     line-height: 1.6;
     margin: 20px 0;
-    max-width: 100%; /* Adjust to control wrapping */
+    max-width: 80%; /* Adjust to control wrapping */
     text-align: center;
     letter-spacing: 3px;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
