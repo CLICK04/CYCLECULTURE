@@ -52,16 +52,16 @@
 /* Vision Text */
 .vision-text {
     font-size: 25px;
-    line-height: 1.6;
-    margin: 20px 0;
-    max-width: 100%; /* Adjust to control wrapping */
-    text-align: center;
-    letter-spacing: 3px;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    padding: 0 20px;
-    margin-bottom: 20px; /* Space between text and subheading */
-    color: #3cff03;
+    line-height: 1.4; /* Reduces the line spacing slightly */
+    margin: 0; /* Removes extra margin around the text */
+    max-width: 800px; /* Limits text width for readability; adjust if needed */
+    text-align: justify; /* Justifies text to eliminate end-of-line gaps */
+    letter-spacing: 2px; /* Adjusts spacing between letters */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Softer shadow effect */
+    padding: 10px 0; /* Minimal padding around text */
+    color: #3cff03; /* Text color */
 }
+
 
 /* Vision Subheading */
 .vision-subheading {
