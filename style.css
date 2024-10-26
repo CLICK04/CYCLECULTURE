@@ -95,9 +95,10 @@
         text-align: justify; /* Justify the text */
         text-justify: inter-word; /* Distribute words evenly */
         text-align-last: center; /* Center the last line to avoid awkward spacing */
-        hyphens: auto; /* Enable hyphenation to reduce large gaps */
+        hyphens: none; /* Enable hyphenation to reduce large gaps */
         word-spacing: -1px; /* Adjust word spacing if needed */
         padding: 0 20px; /* Ensure there's some padding to avoid text touching edges */
+        max-width: 90%;
     }
     
     .line-break {
