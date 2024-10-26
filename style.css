@@ -40,7 +40,7 @@
 
 /* Vision Heading */
 .vision-heading {
-    font-size: 50px;
+    font-size: 80px;
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -51,10 +51,10 @@
 
 /* Vision Text */
 .vision-text {
-    font-size: 30px;
+    font-size: 50px;
     line-height: 1.6;
     margin: 20px 0;
-    max-width: 80%; /* Adjust to control wrapping */
+    max-width: 100%; /* Adjust to control wrapping */
     text-align: center;
     letter-spacing: 3px;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
