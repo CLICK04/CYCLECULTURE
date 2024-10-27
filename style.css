@@ -31,7 +31,7 @@
     z-index: 2; /* Place above the overlay */
     text-align: center;
     color: #ffffff;
-    width: 80%; /* Ensure the container spans the full width */
+    width: 100%; /* Ensure the container spans the full width */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Center the container horizontally and vertically */
