@@ -85,7 +85,7 @@
 
 @media (max-width: 768px) {
     .vision-heading {
-        font-size: 30px;
+        font-size: 50px;
         margin-bottom: 10px; /* Reduced spacing for mobile devices */
     }
     .vision-text {
