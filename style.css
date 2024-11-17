@@ -14,7 +14,7 @@
     position: relative; /* To contain the overlay */
 }
 
-/* Overlay */
+/* Overlay
 .overlay {
     position: absolute;
     top: 0;
