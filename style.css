@@ -7,11 +7,11 @@
     flex-direction: column;
     background-color: #0a142d;
     /* background-image: url(1.jpg);  Add your background image here */
-    background-size: cover; /* Ensure the background image covers the entire container */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    background-attachment: fixed; /* Optional: Keep the background fixed when scrolling */
-    position: relative; /* To contain the overlay */
+   /*  background-size: cover; /* Ensure the background image covers the entire container */
+    /* background-position: center; /* Center the background image */
+    /* background-repeat: no-repeat; /* Prevent the image from repeating */
+    /* background-attachment: fixed; /* Optional: Keep the background fixed when scrolling */
+    /* position: relative;  To contain the overlay */
 }
 
 /* Overlay
