@@ -1,20 +1,20 @@
-.index-body {
+.index-body { 
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
     font-family: 'Glacial Indifference', sans-serif;
     height: 100vh; /* Make the body fill the entire viewport height */
     display: flex;
     flex-direction: column;
-    background-color: #0a142d;
+    background-color: #0a142d; /* Set background color */
     /* background-image: url(1.jpg);  Add your background image here */
-   /*  background-size: cover; /* Ensure the background image covers the entire container */
+    /* background-size: cover; /* Ensure the background image covers the entire container */
     /* background-position: center; /* Center the background image */
     /* background-repeat: no-repeat; /* Prevent the image from repeating */
     /* background-attachment: fixed; /* Optional: Keep the background fixed when scrolling */
     /* position: relative;  To contain the overlay */
 }
 
-/* Overlay
+/* Overlay */
 .overlay {
     position: absolute;
     top: 0;
@@ -22,8 +22,9 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6); /* Adjust the color and opacity as needed */
-    /*z-index: 1;  Ensure it sits below the vision container */
+    /* z-index: 1;  Ensure it sits below the vision container */
 }
+
 
 /* Vision Container */
 .vision-container {
