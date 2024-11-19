@@ -15,7 +15,7 @@
 }
 
 /* Media query for 4K resolution screens */
-@media (min-width: 2560px) {
+@media (min-width: 768px) {
     .index-body {
         background-image: url(m1.jpg); /* High-resolution 4K image */
         background-size: cover; /* Ensure the image fills the viewport */
