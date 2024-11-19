@@ -14,14 +14,23 @@
     position: relative; /* To contain the overlay */
 }
 
-/* Media query for 4K resolution screens */
-@media (min-width: 768px) {
+.index-body {
+    background-color: #0a142d;
+    background-image: url(m1.jpg); /* 4K for desktop */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Mobile-specific image */
+@media (max-width: 768px) {
     .index-body {
-        background-image: url(m1.jpg); /* High-resolution 4K image */
-        background-size: cover; /* Ensure the image fills the viewport */
-        background-position: center; /* Center the image focus */
+        background-image: url(m1.jpg); /* Portrait/mobile image */
+        background-size: cover;
+        background-position: top center;
     }
 }
+
 
 /* Overlay */
 .overlay {
