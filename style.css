@@ -14,14 +14,6 @@
     position: relative; /* To contain the overlay */
 }
 
-.index-body {
-    background-color: #0a142d;
-    background-image: url(m1.jpg); /* 4K for desktop */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 /* Mobile-specific image */
 @media (max-width: 768px) {
     .index-body {
