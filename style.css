@@ -941,7 +941,7 @@
 /* City List Styles */
 .city-list {
     position: fixed;
-    top: 180px;
+    top: 150px;
     left: 100;
     display: flex;
     flex-direction: row; /* Vertical alignment */
