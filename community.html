@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5015973451404959" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="favicon.ico" type="icon">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-56YGC2V2YG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-56YGC2V2YG');
+    </script>
+</head>
+<body class="community-body">
+
+    <!-- Toggle Button -->
+    <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+
+    <!-- Sidebar -->
+    <div class="desktop-nav">
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="experience.html">EXPERIENCE</a>
+            <a href="product.html">PRODUCT</a>
+            <a href="spotlight.html">SPOTLIGHT</a>
+            <a href="community.html">CLUB</a>
+            <a href="contact.html">CONTACT</a>
+
+        </div>
+    </div>
+
+    <!-- Mobile Sidebar -->
+    <button class="sidebar-toggle">☰</button>
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-item"><a href="home.html">HOME</a></div>
+            <div class="sidebar-item"><a href="experience.html">EXPERIENCE</a></div>
+            <div class="sidebar-item"><a href="product.html">PRODUCT</a></div>
+            <div class="sidebar-item"><a href="spotlight.html">SPOTLIGHT</a></div>
+            <div class="sidebar-item"><a href="community.html">CLUB</a></div>
+            <div class="sidebar-item"><a href="contact.html">CONTACT</a></div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- City Selector -->
+<div class="city-list">
+    <div class="city-btn active" data-city="all">All Cities</div>
+    <div class="city-btn" data-city="delhi">Delhi</div>
+    <div class="city-btn" data-city="gurgaon">Gurgaon</div>
+    <div class="city-btn" data-city="mumbai">Mumbai</div>
+</div>
+
+
+
+
+
+
+<!-- Community Cards -->
+<section class="community-container">
+    <!-- Delhi Club Card -->
+    <article class="community-card" data-city="delhi">
+        <div class="community-thumbnail">
+            <img src="community1.jpg" alt="Community Image">
+        </div>
+        <div class="community-content">
+            <p class="community-name"><strong>Club:</strong> Delhi Daredevils</p>
+            <p><strong>Group Size:</strong> 25 Members</p>
+            <p><strong>Location:</strong> Delhi</p>
+            <p><strong>Upcoming Ride:</strong> 25th Dec</p>
+            <p><strong>Activity:</strong> Casual rides, professional rides & occasional rides</p>
+            <a href="delhiclub.html" class="community-button">Meet the Club</a>
+        </div>
+    </article>
+    
+    <!-- Mumbai Club Card -->
+    <article class="community-card" data-city="mumbai">
+        <div class="community-thumbnail">
+            <img src="community2.jpg" alt="Community Image">
+        </div>
+        <div class="community-content">
+            <p class="community-name"><strong>Club:</strong> Mumbai Riders</p>
+            <p><strong>Group Size:</strong> 25 Members</p>
+            <p><strong>Location:</strong> Mumbai</p>
+            <p><strong>Upcoming Ride:</strong> 25th Dec</p>
+            <p><strong>Activity:</strong> Casual rides, professional rides & occasional rides</p>
+            <a href="mumbai.html" class="community-button">Meet the Club</a>
+        </div>
+    </article>
+
+    <!-- More cards as needed -->
+</section>
+
+<script src="cscript.js"></script>
+
+</body>
+</html>
