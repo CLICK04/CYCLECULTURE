@@ -115,33 +115,6 @@
     color: #3cff03;
 }
 
-/* Show the desktop navigation bar on larger screens */
-@media (min-width: 769px) {
-    .desktop-nav {
-        display: flex;
-    }
-
-    .sidebar,
-    .sidebar-toggle {
-        display: none;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
