@@ -1,13 +1,13 @@
-.index-body {
+.index-body { 
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
     font-family: 'Glacial Indifference', sans-serif;
     height: 100vh; /* Make the body fill the entire viewport height */
-    display: none;
+    display: flex;
     flex-direction: column;
     background-color: #0a142d; /* Set background color */
-    background-image: url(home.jpg); /* Desktop image */
-    background-size: cover; /* Ensure the background image covers the entire container */
+    background-image: url(home.jpg);  /* Add your background image here */
+    background-size: cover; /* Ensure the background image covers the entire container
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
     background-attachment: fixed; /* Optional: Keep the background fixed when scrolling */
@@ -22,7 +22,6 @@
         background-position: top center;
     }
 }
-
 
 
 
@@ -44,8 +43,6 @@
         bottom: 20px;
     }
 }
-
-
 
 
 
@@ -114,6 +111,33 @@
 .desktop-nav .nav-links a:hover {
     color: #3cff03;
 }
+
+/* Show the desktop navigation bar on larger screens */
+@media (min-width: 769px) {
+    .desktop-nav {
+        display: flex;
+    }
+
+    .sidebar,
+    .sidebar-toggle {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -204,21 +228,23 @@
     transform: scale(1.1);
 }
 
-
-/* Hide desktop navigation on smaller screens */
-@media (max-width: 768px) {
-    .desktop-nav {
-        display: none; /* Hide desktop navigation for smaller screens */
-    }
-}
-
-/* Hide mobile sidebar toggle and sidebar on larger screens */
+/* Responsive Breakpoints */
 @media (min-width: 769px) {
+    .desktop-nav {
+        display: flex; /* Show desktop navigation for larger screens */
+    }
+
     .sidebar,
     .sidebar-toggle {
-        display: none; /* Hide sidebar and toggle button for larger screens */
+        display: none; /* Hide mobile sidebar for larger screens */
     }
 }
+
+
+
+
+
+
 
 
 
@@ -915,7 +941,7 @@
 /* City List Styles */
 .city-list {
     position: fixed;
-    top: 150px;
+    top: 140px;
     left: 100;
     display: flex;
     flex-direction: row; /* Vertical alignment */
