@@ -3,10 +3,10 @@
     padding: 0; /* Remove default padding */
     font-family: 'Glacial Indifference', sans-serif;
     height: 100vh; /* Make the body fill the entire viewport height */
-    display: flex;
+    display: none;
     flex-direction: column;
     background-color: #0a142d; /* Set background color */
-    background-image: url('home.jpg'); /* Desktop image */
+    background-image: url(home.jpg); /* Desktop image */
     background-size: cover; /* Ensure the background image covers the entire container */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
@@ -17,7 +17,7 @@
 /* Mobile-specific image */
 @media (max-width: 768px) {
     .index-body {
-        background-image: url('homemob.jpg'); /* Portrait/mobile image */
+        background-image: url(homemob.jpg); /* Portrait/mobile image */
         background-size: cover;
         background-position: top center;
     }
