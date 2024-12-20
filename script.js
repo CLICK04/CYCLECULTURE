@@ -1,5 +1,7 @@
-
-
+// Existing function
+function toggleSidebar() {
+    document.querySelector('.sidebar').classList.toggle('active');
+}
 
 
 document.querySelector('.contact-form').addEventListener('submit', function(event) {
