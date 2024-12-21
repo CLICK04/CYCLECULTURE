@@ -124,6 +124,11 @@
     }
 }
 
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none; /* Hide the desktop navigation on smaller screens */
+    }
+}
 
 
 
