@@ -112,11 +112,11 @@
     color: #3cff03;
 }
 
-/* Show the desktop navigation bar on larger screens */
-@media (min-width: 769px) {
+@media (max-width: 768px) {
     .desktop-nav {
-        display: flex;
+        display: none; /* Hide the desktop navigation on smaller screens */
     }
+}
 
     .sidebar,
     .sidebar-toggle {
@@ -124,11 +124,7 @@
     }
 }
 
-@media (max-width: 768px) {
-    .desktop-nav {
-        display: none; /* Hide the desktop navigation on smaller screens */
-    }
-}
+
 
 
 
