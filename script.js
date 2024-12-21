@@ -1,7 +1,12 @@
-// Existing function
+// Function to toggle the sidebar
 function toggleSidebar() {
     document.querySelector('.sidebar').classList.toggle('active');
 }
+
+// Attach the function to the button
+document.querySelector('.sidebar-toggle').addEventListener('click', toggleSidebar);
+
+
 
 
 document.querySelector('.contact-form').addEventListener('submit', function(event) {
