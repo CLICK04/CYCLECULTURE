@@ -1,3 +1,4 @@
+// script.js
 document.addEventListener('DOMContentLoaded', () => {
     // Sidebar Dropdown
     const toggleButton = document.querySelector('.sidebar-toggle');
