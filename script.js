@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Function to toggle the sidebar
-    function toggleSidebar() {
+    // Function to toggle the dropdown menu
+    function toggleDropdown() {
         document.querySelector('.sidebar').classList.toggle('active');
     }
 
-    // Attach the function to the button
-    document.querySelector('.sidebar-toggle').addEventListener('click', toggleSidebar);
+    // Attach toggle function to the button
+    document.querySelector('.sidebar-toggle').addEventListener('click', toggleDropdown);
 });
 
 
