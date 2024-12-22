@@ -1,12 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.querySelector('.sidebar-toggle');
+    const sidebar = document.querySelector('.sidebar');
+
     // Function to toggle the dropdown menu
     function toggleDropdown() {
-        document.querySelector('.sidebar').classList.toggle('active');
+        sidebar.classList.toggle('active');
     }
 
-    // Attach toggle function to the button
-    document.querySelector('.sidebar-toggle').addEventListener('click', toggleDropdown);
+    // Attach the toggle function to the button
+    toggleButton.addEventListener('click', toggleDropdown);
+
+    // Close the menu when navigating to a new page
+    const sidebarLinks = document.querySelectorAll('.sidebar-item a');
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            sidebar.classList.remove('active'); // Ensure the sidebar is hidden after navigation
+        });
+    });
 });
+
+
+
+
 
 
 
