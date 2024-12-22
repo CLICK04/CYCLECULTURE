@@ -1,11 +1,12 @@
-// Function to toggle the sidebar
-function toggleSidebar() {
-    document.querySelector('.sidebar').classList.toggle('active');
-}
+document.addEventListener('DOMContentLoaded', () => {
+    // Function to toggle the sidebar
+    function toggleSidebar() {
+        document.querySelector('.sidebar').classList.toggle('active');
+    }
 
-// Attach the function to the button
-document.querySelector('.sidebar-toggle').addEventListener('click', toggleSidebar);
-
+    // Attach the function to the button
+    document.querySelector('.sidebar-toggle').addEventListener('click', toggleSidebar);
+});
 
 
 
