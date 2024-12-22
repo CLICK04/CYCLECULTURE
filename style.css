@@ -116,16 +116,18 @@
     .desktop-nav {
         display: flex;
     }
-    
+
+    .sidebar,
+    .sidebar-toggle {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
     .desktop-nav {
         display: none; /* Hide the desktop navigation on smaller screens */
     }
 }
-
-
-
-
 
 
 
