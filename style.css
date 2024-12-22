@@ -153,94 +153,84 @@
 
 
 
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
 
-
-/* Mobile Sidebar */
+/* Mobile Sidebar Dropdown */
 .sidebar {
-    position: fixed;
-    top: 0;
-    right: 0; /* Align to the right side */
-    width: 250px; /* Sidebar width */
-    height: 100%;
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 50px; /* Below the toggle button */
+    right: 15px;
+    width: 200px;
     background-color: #0a142d;
-    z-index: 1001;
-    padding: 20px;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.7);
-    transform: translateX(100%); /* Initially hidden */
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    padding: 10px 0;
 }
 
 .sidebar.active {
-    transform: translateX(0); /* Show the sidebar */
+    display: block; /* Show the sidebar when active */
 }
 
 .sidebar-content {
     display: flex;
     flex-direction: column; /* Stack items vertically */
-    align-items: flex-start;
-    padding: 20px;
-    font-family: 'Glacial Indifference', sans-serif;
-    color: #ffffff;
 }
 
 .sidebar-item {
-    font-size: 18px;
-    line-height: 2;
-    width: 100%;
-    text-align: left; /* Align text to the left for mobile */
-    margin-bottom: 15px;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    text-align: left;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .sidebar-item a {
-    color: #ffffff;
     text-decoration: none;
+    color: white;
     display: block;
     width: 100%;
 }
 
 .sidebar-item:hover {
-    background-color: #1c2336;
-    color: #3cff03;
+    background-color: #3cff03;
+    color: #0a142d;
 }
 
 /* Sidebar Toggle Button */
 .sidebar-toggle {
     position: fixed;
-    top: 20px;
-    right: 20px; /* Align to the right */
-    z-index: 1002;
+    top: 15px;
+    right: 15px;
+    z-index: 1001;
     background-color: #3cff03;
     color: #0a142d;
     border: none;
     font-size: 24px;
     padding: 10px 15px;
+    border-radius: 5px;
     cursor: pointer;
-    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .sidebar-toggle:hover {
     background-color: #1c2336;
     color: #3cff03;
-    transform: scale(1.1);
 }
 
 /* Responsive Breakpoints */
 @media (min-width: 769px) {
-    .desktop-nav {
-        display: flex; /* Show desktop navigation for larger screens */
-    }
-
     .sidebar,
     .sidebar-toggle {
-        display: none; /* Hide mobile sidebar for larger screens */
+        display: none; /* Hide dropdown for larger screens */
     }
 }
-
 
 
 
