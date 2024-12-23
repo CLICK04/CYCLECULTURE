@@ -153,41 +153,51 @@
 
 
 
-/* General Reset */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
+
 
 /* Mobile Sidebar Dropdown */
 .sidebar {
     display: none; /* Hidden by default */
-    position: absolute;
-    top: 50px; /* Below the toggle button */
-    right: 15px;
-    width: 200px;
+    position: fixed; /* Fixed for better mobile UX */
+    top: 0;
+    right: 0;
+    height: 100%; /* Full-screen height for better accessibility */
+    width: 75%; /* Occupies 75% of the screen width */
     background-color: #0a142d;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
     z-index: 1000;
-    padding: 10px 0;
+    padding: 20px;
+    transform: translateX(100%); /* Initially hidden off-screen */
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the menu items */
+    align-items: center; /* Horizontally center the menu items */
 }
 
 .sidebar.active {
-    display: block; /* Show the sidebar when active */
+    display: flex; /* Ensure flex properties apply when active */
+    transform: translateX(0); /* Slide-in animation */
 }
 
 .sidebar-content {
     display: flex;
     flex-direction: column; /* Stack items vertically */
+    width: 100%; /* Full width for the items */
+    gap: 10px; /* Spacing between items */
 }
 
 .sidebar-item {
-    padding: 10px 15px;
-    font-size: 16px;
-    text-align: left;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Separator line */
+}
+
+.sidebar-item:last-child {
+    border-bottom: none; /* Remove line for the last item */
 }
 
 .sidebar-item a {
@@ -201,6 +211,32 @@ body {
     background-color: #3cff03;
     color: #0a142d;
 }
+
+.sidebar-footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Sidebar Toggle Button */
 .sidebar-toggle {
