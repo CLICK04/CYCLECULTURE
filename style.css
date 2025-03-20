@@ -936,6 +936,29 @@
     color: #ffffff;
     text-align: left;
 }
+
+/* Contact Information */
+.contact-info {
+    font-size: 1rem;
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: #23314d;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #3cff03;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+    color: #33e002;
+}
+
 /* Register Button - Aligned to the Left */
 .register-button {
     display: inline-block;
