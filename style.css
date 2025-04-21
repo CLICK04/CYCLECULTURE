@@ -653,7 +653,13 @@
     margin-top: 1px; /*Reduced margin between sub-heading and following paragraph */
 }
 
-
+.post-content ul li a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+.post-content ul li a:hover {
+    color: #004499;
+}
 
 
 
