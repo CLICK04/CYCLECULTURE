@@ -1,89 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5015973451404959" crossorigin="anonymous"></script>
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" href="favicon.ico" type="icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contact Cycle Culture | Join India's Cycling Movement</title>
+    <meta name="description" content="Get in touch with Cycle Culture for collaborations, events, or to share your cycling stories">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://cycleculture.in/contact" />
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-56YGC2V2YG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Preload & Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" href="css/contact.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Glacial+Indifference:wght@400;700&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
 
-  gtag('config', 'G-56YGC2V2YG');
-</script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon.ico/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.ico/favicon.svg" />
+    <link rel="shortcut icon" href="/images/favicon.ico/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Cycle Culture" />
+    <link rel="manifest" href="/images/favicon.ico/site.webmanifest" />
+
+    <!-- Styles & Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/contact.css">
+    <meta name="theme-color" content="#00a859">
+
+    <!-- Social Meta -->
+    <meta property="og:title" content="Contact Cycle Culture | Join India's Cycling Movement">
+    <meta property="og:description" content="Get in touch for collaborations, events, or to share your cycling stories">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cycleculture.in/contact">
+    <meta property="og:image" content="https://cycleculture.in/images/contact-preview.jpg">
+    <meta property="og:site_name" content="Cycle Culture">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Cycle Culture | Join India's Cycling Movement">
+    <meta name="twitter:description" content="Get in touch for collaborations, events, or to share your cycling stories">
+    <meta name="twitter:image" content="https://cycleculture.in/images/contact-preview.jpg">
+    <meta name="twitter:site" content="@itscycleculture">
+
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-56YGC2V2YG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-56YGC2V2YG', {
+        'page_title': 'Contact Page',
+        'page_path': '/contact'
+      });
+    </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Cycle Culture",
+      "description": "Contact page for Cycle Culture's cycling community",
+      "url": "https://cycleculture.in/contact",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-7807907890",
+        "contactType": "customer service",
+        "email": "hey@cycleculture.in",
+        "availableLanguage": ["English","Hindi"]
+      }
+    }
+    </script>
 </head>
-<body class="contact-body">
-    <div class="contact-container">
-        <p>You can write to us here!</p>
-        <form class="contact-form" id="contactForm" action="https://formspree.io/f/myzgvenk" method="POST">
-            <label for="contact">Email or Number</label>
-            <input type="text" id="contact" name="contact" placeholder="Your email or phone number" required>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
-
-            <button type="submit">Submit</button>
-        </form>
-        <p id="formResponse" style="display:none;"></p>
-    </div>
-    </body>
-
-
-
-
-<div class="contact-page-social-icons">
-    <a href="https://www.instagram.com/itscycleculture/" target="_blank" class="contact-page-social-icon">
-        <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://x.com/itscycleculture" target="_blank" class="contact-page-social-icon">
-        <i class="fab fa-twitter"></i>
-    </a>
-    <a href="https://www.linkedin.com/company/itscycleculture/" target="_blank" class="contact-page-social-icon">
-        <i class="fab fa-linkedin"></i>
-    </a>
-</div>
-
-   <!-- Top Navigation Bar for Desktop -->
-    <div class="desktop-nav">
-        <div class="nav-links">
-            <a href="./">HOME</a>
-<!--             <a href="./experience">EXPERIENCE</a> -->
-            <a href="./event">EVENT</a>
-            <a href="./spotlight">SPOTLIGHT</a>
-            <a href="./community">CLUB</a>
-            <a href="./contact">CONTACT</a>
-
+<body>
+    <!-- Navigation -->
+    <nav class="contact-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/cycleculturelogo.jpg" alt="Cycle Culture Logo" width="180" height="60">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#spotlight">Spotlight</a>
+                <a href="index.html#experiences">Experiences</a>
+                <a href="index.html#events">Events</a>
+                <a href="index.html#clubs">Clubs</a>
+                <a href="contact.html" class="active">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Mobile Menu">☰</button>
         </div>
-    </div>
+    </nav>
 
-    <!-- Mobile Sidebar -->
-    <button class="sidebar-toggle">☰</button>
-    <div class="sidebar">
-        <div class="sidebar-content">
-            <div class="sidebar-item"><a href="./">HOME</a></div>
-<!--             <div class="sidebar-item"><a href="./experience">EXPERIENCE</a></div> -->
-            <div class="sidebar-item"><a href="./event">EVENT</a></div>
-            <div class="sidebar-item"><a href="./spotlight">SPOTLIGHT</a></div>
-            <div class="sidebar-item"><a href="./community">CLUB</a></div>
-            <div class="sidebar-item"><a href="./contact">CONTACT</a></div>
+    <!-- Contact Section -->
+    <main class="contact-section">
+        <section class="fullscreen-section contact center-align" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/06.jpg')">
+            <div class="section-content active">
+                <h1 class="contact-heading">Connect With Our Cycling Community</h1>
+                <span class="section-subtitle">We'd love to hear from you</span>
+                
+                <div class="contact-methods">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <h3>Email Us</h3>
+                        <p>For collaborations, suggestions, or just to share your cycling stories.</p>
+                        <a href="mailto:hey@cycleculture.in" class="contact-btn">
+                            Send Email <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <h3>Call Us</h3>
+                        <p>For immediate assistance with experiences, events, or club connections.</p>
+                        <a href="tel:+917807907890" class="contact-btn">
+                            Call Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="contact-card newsletter-card">
+                        <i class="fas fa-newspaper contact-icon"></i>
+                        <h3>Stay Updated</h3>
+                        <p>Subscribe for updates on spotlights, experiences and events.</p>
+                        <form action="https://formspree.io/f/mgvkayen" method="POST" class="newsletter-form">
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Your email address" required>
+                                <button type="submit" class="submit-btn">Subscribe</button>
+                            </div>
+                            <input type="hidden" name="_subject" value="New Newsletter Subscription">
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <h3>Follow Our Journey</h3>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/itscycleculture/" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/itscycleculture/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/@itscycleculture" aria-label="YouTube" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
+    <footer class="contact-footer">
+        <div class="footer-content">
+            <span>© 2025 Cycle Culture. All Rights Reserved.</span>
+            <a href="privacy.html" class="footer-link">Privacy Policy</a>
+            <a href="terms.html" class="footer-link">Terms of Service</a>
         </div>
-    </div>
-    
-<script src="script.js"></script> <!-- Link to your JavaScript file -->
+    </footer>
 
-
-
+    <script src="js/contact.js"></script>
 </body>
 </html>
-
-
-    
