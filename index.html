@@ -1,17 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5015973451404959" crossorigin="anonymous"></script>
-    <title>Cycle Culture</title>
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Spotlighting India's cycling culture! Read blogs, discover clubs, and connect with riders near you. #LetsTakeARideToday">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" href="favicon.ico" type="icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cycle Culture | India's Cycling Movement</title>
+    <meta name="description" content="Experience India's most breathtaking cycling adventures">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://cycleculture.in/" />
 
-    <!-- Google Tag Manager -->
+    <!-- Preload & Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" href="css/home.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Glacial+Indifference:wght@400;700&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+
+    <link rel="icon" type="image/png" href="/images/favicon.ico/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.ico/favicon.svg" />
+    <link rel="shortcut icon" href="/images/favicon.ico/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Cycle Culture" />
+    <link rel="manifest" href="/images/favicon.ico/site.webmanifest" />
+    <!-- Styles & Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+    <meta name="theme-color" content="#00a859">
+
+    <!-- Social Meta -->
+    <meta property="og:title" content="Cycle Culture | India's Cycling Movement">
+    <meta property="og:description" content="Experience India's most breathtaking cycling adventures">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cycleculture.in/">
+    <meta property="og:image" content="https://cycleculture.in/images/social-preview.jpg">
+    <meta property="og:site_name" content="Cycle Culture">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cycle Culture | India's Cycling Movement">
+    <meta name="twitter:description" content="Experience India's most breathtaking cycling adventures">
+    <meta name="twitter:image" content="https://cycleculture.in/images/social-preview.jpg">
+    <meta name="twitter:site" content="@itscycleculture">
+
+    <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-56YGC2V2YG"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -19,50 +53,192 @@
       gtag('js', new Date());
       gtag('config', 'G-56YGC2V2YG');
     </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Cycle Culture",
+      "url": "https://cycleculture.in/",
+      "description": "Spotlighting India's cycling culture through adventures, events and community",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://cycleculture.in/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
 </head>
-
-<body class="index-body">
-    <!-- Top Navigation Bar for Desktop -->
-    <div class="desktop-nav">
-        <div class="nav-links">
-            <a href="./">HOME</a>
-<!--             <a href="./experience">EXPERIENCE</a> -->
-            <a href="./event">EVENT</a>
-            <a href="./spotlight">SPOTLIGHT</a>
-            <a href="./community">CLUB</a>
-            <a href="./contact">CONTACT</a>
-
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/cycleculturelogo.jpg" alt="Cycle Culture Logo">
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#spotlight">Spotlight</a>
+                <a href="#experiences">Experiences</a>
+                <a href="#events">Events</a>
+                <a href="#clubs">Clubs</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
         </div>
-    </div>
+    </nav>
 
-    <!-- Mobile Sidebar -->
-    <button class="sidebar-toggle">☰</button>
-    <div class="sidebar">
-        <div class="sidebar-content">
-            <div class="sidebar-item"><a href="./">HOME</a></div>
-<!--             <div class="sidebar-item"><a href="./experience">EXPERIENCE</a></div> -->
-            <div class="sidebar-item"><a href="./event">EVENT</a></div>
-            <div class="sidebar-item"><a href="./spotlight">SPOTLIGHT</a></div>
-            <div class="sidebar-item"><a href="./community">CLUB</a></div>
-            <div class="sidebar-item"><a href="./contact">CONTACT</a></div>
-
+    <!-- Hero Section -->
+    <section id="home" class="fullscreen-section hero center-align">
+        <div class="video-background">
+            <video autoplay muted loop playsinline>
+                <source src="images/cycleculturevideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
-    </div>
-   
-    <!-- Social Icons -->
-    <div class="contact-page-social-icons">
-        <a href="https://www.instagram.com/itscycleculture/" target="_blank" class="contact-page-social-icon">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://x.com/itscycleculture" target="_blank" class="contact-page-social-icon">
-            <i class="fab fa-twitter"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/itscycleculture/" target="_blank" class="contact-page-social-icon">
-            <i class="fab fa-linkedin"></i>
-        </a>
-    </div>
- <script src="script.js"></script>
+        <div class="arrow-hint" aria-hidden="true">↓</div>
+    </section>
+
+    <!-- Spotlight Section -->
+    <section id="spotlight" class="fullscreen-section spotlight right-align" style="background-image: url('images/cycling-culture-india.jpg')">
+        <div class="section-content">
+            <h2>Spotlight</h2>
+            <span class="section-subtitle">Highlighting cycling culture of India</span>
+            
+            <div class="spotlight-item">
+                <p>As dusk falls over Mumbai, a remarkable transformation occurs. The relentless daytime energy gives way to a calmer, more mysterious version of India's bustling metropolis.</p>
+                <a href="#" class="read-more">continue reading →</a>
+            </div>
+            
+            <div class="spotlight-item">
+                <p>In an era where actions speak louder than words, Cycle with PM could redefine public engagement by turning inspiration into tangible impact.</p>
+                <a href="#" class="read-more">continue reading →</a>
+            </div>
+            
+            <div class="spotlight-item">
+                <p>Whether you're a seasoned cyclist or a beginner, this guide will take you through the growing cycling culture, best cities, popular routes, events, and tips to make your ride unforgettable.</p>
+                <a href="#" class="read-more">continue reading →</a>
+            </div>
+            
+            <a href="#" class="see-more">View all spotlights</a>
+        </div>
+    </section>
+
+    <!-- Experiences Section -->
+    <section id="experiences" class="fullscreen-section experiences left-align" style="background-image: url('images/pushkar-rajasthan.jpg')">
+        <div class="section-content">
+            <h2>Experiences</h2>
+            <span class="section-subtitle">Handpicked cycling experiences across India</span>
+            
+            <div class="spotlight-item">
+                <p>Pushkar's sacred lakes and desert landscapes create a surreal backdrop for cycling. Our 3-day adventure takes you through rural villages and golden dunes at sunset.</p>
+                <a href="#" class="read-more">view details →</a>
+            </div>
+            
+            <div class="spotlight-item">
+                <p>The Western Ghats offer some of India's most challenging climbs and rewarding descents. This 5-day tour includes plantation stays and local cuisine.</p>
+                <a href="#" class="read-more">view details →</a>
+            </div>
+            
+            <div class="spotlight-item">
+                <p>Explore Kerala's backwaters on two wheels, cycling through coconut groves and fishing villages, with overnight stays on traditional houseboats.</p>
+                <a href="#" class="read-more">view details →</a>
+            </div>
+            
+            <a href="#" class="see-more">See all experiences</a>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="fullscreen-section events right-align" style="background-image: url('images/cycling-event.jpg')">
+        <div class="section-content">
+            <h2>Events</h2>
+            <span class="section-subtitle">Join cycling events near you</span>
+            
+            <div class="spotlight-item">
+                <p>Dapoli Summer Cyclothon - May 11-12. Coastal routes with sea views through Ratnagiri's picturesque landscapes.</p>
+                <a href="#" class="read-more">learn more →</a>
+            </div>
+            
+            <div class="spotlight-item">
+                <p>Bangalore Night Ride - June 5. Experience the city's landmarks illuminated, with rest stops at iconic locations.</p>
+                <a href="#" class="read-more">learn more →</a>
+            </div>
+            
+            <div class="spotlight-item">
+                <p>Himalayan Challenge - July 15-20. A 5-day endurance ride through the Himalayan foothills with support vehicles.</p>
+                <a href="#" class="read-more">learn more →</a>
+            </div>
+            
+            <a href="#" class="see-more">View all events</a>
+        </div>
+    </section>
+
+    <!-- Clubs Section -->
+    <section id="clubs" class="fullscreen-section clubs left-align" style="background-image: url('images/cycling-clubs.jpg')">
+        <div class="section-content">
+            <h2>Clubs</h2>
+            <span class="section-subtitle">Connect with local cycling communities</span>
+            
+            <div class="spotlight-item">
+                <p>Bangalore Cycling Club - 700+ members organizing weekly rides, workshops, and advocacy for cycling infrastructure.</p>
+                <a href="#" class="read-more">join club →</a>
+            </div>
+            
+            <div class="spotlight-item">
+                <p>Mumbai Midnight Cyclists - A community that explores the city's empty streets after midnight, with safety marshals.</p>
+                <a href="#" class="read-more">join club →</a>
+            </div>
+            
+            <div class="spotlight-item">
+                <p>Delhi NCR Cycling Collective - Focused on urban cycling advocacy and creating safer routes across the capital region.</p>
+                <a href="#" class="read-more">join club →</a>
+            </div>
+            
+            <a href="#" class="see-more">Explore all clubs</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="fullscreen-section contact center-align" style="background-image: url('images/connect-cycling.jpg')">
+        <div class="section-content">
+            <h2>Connect with us</h2>
+            <span class="section-subtitle">Join the cycling revolution</span>
+            
+            <div class="spotlight-item">
+                <p>Email us at hey@cycleculture.in for collaborations, suggestions, or just to share your cycling stories.</p>
+                <a href="mailto:hey@cycleculture.in" class="read-more">send email →</a>
+            </div>
+            
+            <div class="spotlight-item">
+                <p>Call +91 7807907890 for immediate assistance with experiences, events, or club connections.</p>
+                <a href="tel:+917807907890" class="read-more">call now →</a>
+            </div>
+            
+            <div class="spotlight-item">
+                <p>Subscribe to our newsletter for updates on spotlights, experiences and events.</p>
+                <div class="newsletter-form-container">
+                    <form action="https://formspree.io/f/mgvkayen" method="POST" class="newsletter-form">
+                        <input type="email" name="email" placeholder="Your email address" required>
+                        <span class="subscribe-text">Subscribe</span>
+                        <input type="hidden" name="_subject" value="New Newsletter Subscription">
+                    </form>
+                </div>
+            </div>
+            
+            <div class="social-row">
+                <a href="https://www.instagram.com/itscycleculture/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/itscycleculture/" aria-label="Linkedin"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@itscycleculture" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+            <div class="footer-line">
+                <span>© 2025 Cycle Culture</span>
+            </div>
+        </div>
+    </section>
+
+    <script defer src="js/home.js"></script>
 </body>
-
-
 </html>
