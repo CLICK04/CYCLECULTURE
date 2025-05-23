@@ -1,217 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5015973451404959" crossorigin="anonymous"></script>
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotlight</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" href="favicon.ico" type="icon">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-56YGC2V2YG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cycle Culture Spotlight | Stories of India's Cycling Culture</title>
+    <meta name="description" content="Discover inspiring stories and insights about India's growing cycling culture and community">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://cycleculture.in/spotlight" />
+    <link rel="icon" href="images/favicon.ico" type="icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
-  gtag('config', 'G-56YGC2V2YG');
-</script>
+    <!-- Preload & Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" href="css/home.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Glacial+Indifference:wght@400;700&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+
+    <!-- Styles & Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/home.css">
+    <meta name="theme-color" content="#00a859">
+
+    <!-- Social Meta -->
+    <meta property="og:title" content="Cycle Culture Spotlight | Stories of India's Cycling Culture">
+    <meta property="og:description" content="Discover inspiring stories and insights about India's growing cycling community">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cycleculture.in/spotlight">
+    <meta property="og:image" content="https://cycleculture.in/images/spotlight-social-preview.jpg">
+    <meta property="og:site_name" content="Cycle Culture">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cycle Culture Spotlight | Stories of India's Cycling Culture">
+    <meta name="twitter:description" content="Discover inspiring stories about India's growing cycling community">
+    <meta name="twitter:image" content="https://cycleculture.in/images/spotlight-social-preview.jpg">
+    <meta name="twitter:site" content="@itscycleculture">
+
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-56YGC2V2YG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-56YGC2V2YG', {
+        'page_title': 'Spotlight Page',
+        'page_path': '/spotlight'
+      });
+    </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Cycle Culture Spotlight",
+      "url": "https://cycleculture.in/spotlight",
+      "description": "A collection of stories highlighting India's cycling culture",
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "url": "https://cycleculture.in/spotlight/mumbai's-midnight-cycling-revolution.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "url": "https://cycleculture.in/spotlight/India's-best-hill-stations-for-cycling-adventures.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "url": "https://cycleculture.in/spotlight/is-10km-cycling-every-day-the-golden-distance.html"
+          }
+        ]
+      }
+    }
+    </script>
 </head>
-<body class="spotlight-body">
 
-
-
-  <!-- Top Navigation Bar for Desktop -->
-    <div class="desktop-nav">
-        <div class="nav-links">
-            <a href="./">HOME</a>
-<!--             <a href="./experience">EXPERIENCE</a> -->
-            <a href="./event">EVENT</a>
-            <a href="./spotlight">SPOTLIGHT</a>
-            <a href="./community">CLUB</a>
-            <a href="./contact">CONTACT</a>
-
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="images/cycleculturelogo.jpg" alt="Cycle Culture Logo"></a>
+            </div>
+            <div class="nav-links">
+                <a href="./">Home</a>
+                <a href="spotlight.html" class="active">Spotlight</a>
+                <a href="#">Experiences</a>
+                <a href="#">Events</a>
+                <a href="#">Clubs</a>
+                <a href="#">Contact</a>
+            </div>
+            <button class="mobile-menu-btn">☰</button>
         </div>
+    </nav>
+
+   <!-- Change this section -->
+<section id="newsletter-section" class="fullscreen-section hero" style="background-image: url('images/01.jpg')">
+    <div class="section-content left-align">
+        <h2 class="normal-font">Spotlight</h2>
+        <span class="section-subtitle">Highlighting cycling culture of India</span>
     </div>
+</section>
 
-    <!-- Mobile Sidebar -->
-    <button class="sidebar-toggle">☰</button>
-    <div class="sidebar">
-        <div class="sidebar-content">
-            <div class="sidebar-item"><a href="./">HOME</a></div>
-<!--             <div class="sidebar-item"><a href="./experience">EXPERIENCE</a></div> -->
-            <div class="sidebar-item"><a href="./event">EVENT</a></div>
-            <div class="sidebar-item"><a href="./spotlight">SPOTLIGHT</a></div>
-            <div class="sidebar-item"><a href="./community">CLUB</a></div>
-            <div class="sidebar-item"><a href="./contact">CONTACT</a></div>
+    <!-- Spotlight Section -->
+    <section id="spotlight" class="fullscreen-section spotlight" style="background-image: url('images/cycling-culture-india.jpg')">
+        <div class="section-content">
+            <h2>recent stories</h2>
+            
+            <div class="spotlight-item">
+                <p>As dusk falls over Mumbai, a remarkable transformation occurs. The relentless daytime energy gives way to a calmer, more mysterious version of India's bustling metropolis.</p>
+                <a href="#spotlight/mumbai's-midnight-cycling-revolution.html" class="read-more">continue reading →</a>
+            </div>
+            
+            <div class="spotlight-item">
+                <p>Discover India's top cycling-friendly hill stations with cool weather, scenic routes, and rental information for unforgettable cycling adventures.</p>
+                <a href="#spotlight/India's-best-hill-stations-for-cycling-adventures.html" class="read-more">continue reading →</a>
+            </div>
+            
+            <div class="spotlight-item">
+                <p>Discover why 10km daily cycling hits the sweet spot for health benefits, mental clarity and environmental impact. Science-backed insights on the perfect cycling distance.</p>
+                <a href="#spotlight/is-10km-cycling-every-day-the-golden-distance.html" class="read-more">continue reading →</a>
+            </div>
 
+            <div class="spotlight-item">
+                <p>How a 'Cycle with PM' initiative could create more tangible impact than radio addresses by promoting health, sustainability and public engagement through action.</p>
+                <a href="#spotlight/why-cycle-with-PM-could-be-more-impactful-than-mann-ki-baat.html" class="read-more">continue reading →</a>
+            </div>
+            
+            <div class="spotlight-item">
+                <p>Explore India's diverse cycling culture with our comprehensive guide covering routes, seasons, bike types, and cycling tips.</p>
+                <a href="#spotlight/a-complete-guide-to-cycling-in-India.html" class="read-more">continue reading →</a>
+            </div>
+            
+            <div class="spotlight-item">
+                <p>Learn how to build a daily 10km cycling habit without expensive gear. Practical tips for beginners to make cycling sustainable and enjoyable.</p>
+                <a href="#spotlight/how-to-make-10km-cycling-your-daily-habit-without-spending-a-fortune.html" class="read-more">continue reading →</a>
+            </div>
+            
+            <div class="newsletter-cta">
+                <div class="newsletter-form-container">
+                    <form action="https://formspree.io/f/mgvkayen" method="POST" class="newsletter-form">
+                        <span class="subscribe-text">Subscribe →</span>
+                        <input type="email" name="email" placeholder="Your email address" required>
+                        <input type="hidden" name="_subject" value="New Newsletter Subscription">
+                    </form>
+                </div>
+            </div>
         </div>
-    </div>
-<script src="script.js"></script> <!-- Link to your JavaScript file -->
+    
+        <div class="social-row">
+            <a href="https://www.instagram.com/itscycleculture/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/itscycleculture/" aria-label="Linkedin"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/@itscycleculture" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+    </section>
 
-
-
-
-    <!-- BLOG POSTS SECTION -->
-    <section class="blog-container">
-        <!-- 50 blog posts -->
-
-         <article class="blog-post">
-            <img src="26.jpg" alt="Blog Image">
-            <p>Mumbai's midnight cycling revolution</p>
-            <a href="./mumbai-midnight-cycling-revolution" class="read-more">Read More</a>
-        </article>  
-
-         <article class="blog-post">
-            <img src="25.jpg" alt="Blog Image">
-            <p>How to make 10km cycling your daily habit without spending a fortune</p>
-            <a href="./how-to-make-10km-cycling-your-daily-habit-without-spending-a-fortune" class="read-more">Read More</a>
-        </article>  
-
-        
-        <article class="blog-post">
-            <img src="24.jpg" alt="Blog Image">
-            <p>India’s best hill stations for cycling adventures</p>
-            <a href="./Indias-best-hill-stations-for-cycling-adventures" class="read-more">Read More</a>
-        </article>   
-
-        
-        <article class="blog-post">
-            <img src="23.jpg" alt="Blog Image">
-            <p>Why every woman should grab a cycle</p>
-            <a href="./why-every-woman-should-grab-a-cycle" class="read-more">Read More</a>
-        </article>   
-        
-        <article class="blog-post">
-            <img src="22.jpg" alt="Blog Image">
-            <p>The complete guide to choosing the right cycle for your needs</p>
-            <a href="./the-complete-guide-to-choosing-the-right-cycle-for-your-needs" class="read-more">Read More</a>
-        </article>   
-        <article class="blog-post">
-            <img src="21.jpg" alt="Blog Image">
-            <p>India’s 7.3 hour screen problem. Can cycling be the answer?</p>
-            <a href="./Indias-7.3-hour-screen-problem-Can-cycling-be-the-answer" class="read-more">Read More</a>
-        </article>
-        <article class="blog-post">
-            <img src="20.jpg" alt="Blog Image">
-            <p>Why 'Cycle with PM' could be more impactful than 'Mann Ki Baat'</p>
-            <a href="./why-cycle-with-PM-could-be-more-impactful-than-mann-ki-baat" class="read-more">Read More</a>
-        </article>
-          <article class="blog-post">
-            <img src="19.jpg" alt="Blog Image">
-            <p>What happens if the Prime Minister of India starts Cycling?</p>
-            <a href="./what-happens-if-the-Prime-Minister-of-India-starts-cycling" class="read-more">Read More</a>
-        </article>
-
-         </article>
-          <article class="blog-post">
-            <img src="18.jpg" alt="Blog Image">
-            <p>Best Seasons and Weather Conditions for Cycling in India</p>
-            <a href="./best-seasons-and-weather-conditions-for-cycling-in-India" class="read-more">Read More</a>
-        </article>
-
-         </article>
-          <article class="blog-post">
-            <img src="17.jpg" alt="Blog Image">
-            <p>A Complete Guide to Cycling in India</p>
-            <a href="./a-complete-guide-to-cycling-in-india" class="read-more">Read More</a>
-        </article>
-        
-        <article class="blog-post">
-            <img src="01.jpg" alt="Blog Image">
-            <p>Cycle Culture in India – From inception to present day scenario</p>
-            <a href="./cycle-culture-in-india-from-inception-to-present-day-scenarios" class="read-more">Read More</a>
-        </article>
-
-        <article class="blog-post">
-            <img src="02.jpg" alt="Blog Image">
-            <p>Is 10km cycling every day the Golden Distance?</p>
-            <a href="./is-10km-cycling-every-day-the-golden-distance" class="read-more">Read More</a>
-        </article>
-
-        <article class="blog-post">
-            <img src="03.jpg" alt="Weekend cycing in india">
-            <p>The rise of weekend cycling in India: More than just a trend</p>
-            <a href="./the-rise-of-weekend-cycling-in-India-more-than-just-a-trend" class="read-more">Read More</a>
-        </article>
-
-        <article class="blog-post">
-            <img src="04.jpg" alt="Blog Image">
-            <p>5 epic cycling destinations in India for November adventures</p>
-            <a href="./5-epic-cycling-destinations-in-India-for-November-adventures" class="read-more">Read More</a>
-        </article>
-
-        <article class="blog-post">
-            <img src="05.jpg" alt="Blog Image">
-            <p>Reasons to choose an Electric Cycle!</p>
-            <a href="./reasons-to-choose-an-electric-cycle" class="read-more">Read More</a>
-        </article>
-        <article class="blog-post">
-            <img src="06.jpg" alt="Blog Image">
-            <p>Explore the best types of Electric Cycles available in India today</p>
-            <a href="./explore-the-best-types-of-electric-cycles-available-in-India-today" class="read-more">Read More</a>
-        </article>
-         <article class="blog-post">
-            <img src="07.jpg" alt="Blog Image">
-            <p>Choosing the perfect electric cycle</p>
-            <a href="./choosing-the-perfect-electric-cycle" class="read-more">Read More</a>
-        </article>
-          <article class="blog-post">
-            <img src="08.jpg" alt="Blog Image">
-            <p>How dedicated cycling lanes could change the game</p>
-            <a href="./how-dedicated-cycling-lanes-could-change-the-game" class="read-more">Read More</a>
-        </article>
-        </article>
-          <article class="blog-post">
-            <img src="09.jpg" alt="Blog Image">
-            <p>Electric cycles in India: Price range guide</p>
-            <a href="./electric-cycles-in-india-price-range-guide" class="read-more">Read More</a>
-        </article>
-        </article>
-          <article class="blog-post">
-            <img src="10.jpg" alt="Blog Image">
-            <p>Delhi’s Smog: Cycling through visible and invisible impacts</p>
-            <a href="./delhis-smog-cycling-through-visible-and-invisible-impacts" class="read-more">Read More</a>
-        </article>
-          </article>
-        <article class="blog-post">
-            <img src="11.jpg" alt="Blog Image">
-            <p>Winter cycling tips for a safe and comfortable ride</p>
-            <a href="./winter-cycling-tips-for-a-safe-and-comfortable-ride" class="read-more">Read More</a>
-        </article>
-         <article class="blog-post">
-            <img src="12.jpg" alt="Blog Image">
-            <p>Can cycling save the world?</p>
-            <a href="./can-cycling-save-the-world" class="read-more">Read More</a>
-        </article>
-         <article class="blog-post">
-            <img src="13.jpg" alt="Blog Image">
-            <p>Why cycling is the answer to modern complexities</p>
-            <a href="./why-cycling-is-the-answer-to-modern-complexities" class="read-more">Read More</a>
-        </article>
-          <article class="blog-post">
-            <img src="14.jpg" alt="Blog Image">
-            <p>The need for a National Cycling Policy in India</p>
-            <a href="./the-need-for-a-National-Cycling-Policy-in-India" class="read-more">Read More</a>
-        </article>
-         </article>
-          <article class="blog-post">
-            <img src="15.jpg" alt="Blog Image">
-            <p>Cycling to work in India through the lens of society</p>
-            <a href="./cycling-to-work-in-India-through-the-lens-of-society" class="read-more">Read More</a>
-        </article>
-    </article>
-        
-       
-        
-       
-    <!-- PAGINATION -->
-    <!-- <div class="pagination">
-        <a href="#" class="prev">« Prev</a>
-        <a href="#" class="next">Next »</a>
-    </div>  -->
-
+    <script src="js/spotlight.js"></script>
 </body>
 </html>
