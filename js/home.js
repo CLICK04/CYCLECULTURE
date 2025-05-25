@@ -66,58 +66,71 @@ document.querySelector('.arrow-hint')?.addEventListener('click', function() {
 });
 
 // Newsletter form submission
-// Newsletter form submission
-document.querySelector('.newsletter-form')?.addEventListener('submit', function(e) {
+// Newsletter form submission - UPDATED BULLETPROOF VERSION
+document.querySelector('.newsletter-form')?.addEventListener('submit', async function(e) {
     e.preventDefault();
-    submitForm(this);
+    await handleFormSubmission(this);
 });
 
-// Proper click handler for the span
-document.querySelector('.subscribe-text')?.addEventListener('click', function(e) {
-    e.preventDefault(); // Important!
+// Click handler for the subscribe text - UPDATED
+document.querySelector('.subscribe-text')?.addEventListener('click', async function(e) {
+    e.preventDefault();
     const form = this.closest('form');
-    submitForm(form);
+    await handleFormSubmission(form);
 });
 
-function submitForm(form) {
+async function handleFormSubmission(form) {
     const emailInput = form.querySelector('input[type="email"]');
     const subscribeText = form.querySelector('.subscribe-text');
-    const email = emailInput.value;
+    const email = emailInput.value.trim();
     
     if (!email) return;
     
     // Visual feedback
+    const originalText = subscribeText.textContent;
     subscribeText.textContent = 'Sending...';
     subscribeText.style.opacity = '0.7';
     
-    fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: {
-            'Accept': 'application/json'
-        }
-    })
-    .then(response => {
-        if (!response.ok) throw new Error('Form submission failed');
+    try {
+        // Create a new FormData object
+        const formData = new FormData(form);
         
-        // Success state
-        subscribeText.innerHTML = '✓ Subscribed';
-        subscribeText.style.opacity = '1';
+        // Add any additional fields if needed
+        formData.append('_gotcha', ''); // Helps prevent spam
+        
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        
+        if (!response.ok) throw new Error('Submission failed');
+        
+        // Success feedback
+        subscribeText.innerHTML = '✓ Done!';
+        subscribeText.style.color = '#3aff9e';
         emailInput.value = '';
         
         // Reset after 2 seconds
         setTimeout(() => {
-            subscribeText.textContent = 'Subscribe';
-        }, 2000);
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        subscribeText.textContent = 'Try Again';
-        setTimeout(() => {
-            subscribeText.textContent = 'Subscribe';
+            subscribeText.textContent = originalText;
+            subscribeText.style.color = '';
             subscribeText.style.opacity = '1';
         }, 2000);
-    });
+        
+    } catch (error) {
+        console.error('Error:', error);
+        subscribeText.textContent = 'Try Again';
+        subscribeText.style.color = '#ff6b6b';
+        
+        setTimeout(() => {
+            subscribeText.textContent = originalText;
+            subscribeText.style.color = '';
+            subscribeText.style.opacity = '1';
+        }, 2000);
+    }
 }
 
 // Initialize
