@@ -13,6 +13,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 // Newsletter form submission
+// Newsletter form submission
 document.querySelector('.newsletter-form')?.addEventListener('submit', function(e) {
     e.preventDefault();
     const form = this;
@@ -37,7 +38,8 @@ document.querySelector('.newsletter-form')?.addEventListener('submit', function(
     .catch(error => console.error('Error:', error));
 });
 
-// Make the subscribe text clickable
+
+// Add this to your existing JavaScript
 document.querySelector('.subscribe-text')?.addEventListener('click', function() {
-    this.closest('form').submit();
-});
+    document.querySelector('.newsletter-form')?.submit();
+});  
