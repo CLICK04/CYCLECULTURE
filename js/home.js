@@ -66,18 +66,29 @@ document.querySelector('.arrow-hint')?.addEventListener('click', function() {
 });
 
 // Newsletter form submission
+// Newsletter form submission
 document.querySelector('.newsletter-form')?.addEventListener('submit', function(e) {
     e.preventDefault();
-    const form = this;
+    submitForm(this);
+});
+
+// Proper click handler for the span
+document.querySelector('.subscribe-text')?.addEventListener('click', function(e) {
+    e.preventDefault(); // Important!
+    const form = this.closest('form');
+    submitForm(form);
+});
+
+function submitForm(form) {
     const emailInput = form.querySelector('input[type="email"]');
     const subscribeText = form.querySelector('.subscribe-text');
     const email = emailInput.value;
     
     if (!email) return;
     
-    // Visual feedback while submitting
-    subscribeText.textContent = 'Submitting...';
-    subscribeText.style.color = '#ffffff';
+    // Visual feedback
+    subscribeText.textContent = 'Sending...';
+    subscribeText.style.opacity = '0.7';
     
     fetch(form.action, {
         method: 'POST',
@@ -89,34 +100,25 @@ document.querySelector('.newsletter-form')?.addEventListener('submit', function(
     .then(response => {
         if (!response.ok) throw new Error('Form submission failed');
         
-        // Success state - add tick mark and change color temporarily
-        subscribeText.innerHTML = 'Subscribed ✓';
-        subscribeText.style.color = '#3aff9e';
-        
-        // Clear the input
+        // Success state
+        subscribeText.innerHTML = '✓ Subscribed';
+        subscribeText.style.opacity = '1';
         emailInput.value = '';
         
-        // Reset after 3 seconds
+        // Reset after 2 seconds
         setTimeout(() => {
             subscribeText.textContent = 'Subscribe';
-            subscribeText.style.color = ''; // Reverts to original color
-        }, 3000);
+        }, 2000);
     })
     .catch(error => {
         console.error('Error:', error);
         subscribeText.textContent = 'Try Again';
-        subscribeText.style.color = '#ff6b6b'; // Red for error
         setTimeout(() => {
             subscribeText.textContent = 'Subscribe';
-            subscribeText.style.color = ''; // Reverts to original color
+            subscribeText.style.opacity = '1';
         }, 2000);
     });
-});
-
-// Keep your existing click handler
-document.querySelector('.subscribe-text')?.addEventListener('click', function() {
-    document.querySelector('.newsletter-form')?.submit();
-});
+}
 
 // Initialize
 window.addEventListener('scroll', () => {
