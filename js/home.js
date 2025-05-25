@@ -70,12 +70,14 @@ document.querySelector('.newsletter-form')?.addEventListener('submit', function(
     e.preventDefault();
     const form = this;
     const emailInput = form.querySelector('input[type="email"]');
+    const subscribeText = form.querySelector('.subscribe-text');
     const email = emailInput.value;
     
     if (!email) return;
     
-    alert(`Thank you for subscribing with ${email}! We'll keep you updated.`);
-    emailInput.value = '';
+    // Visual feedback while submitting
+    subscribeText.textContent = 'Submitting...';
+    subscribeText.style.color = '#ffffff';
     
     fetch(form.action, {
         method: 'POST',
@@ -86,16 +88,35 @@ document.querySelector('.newsletter-form')?.addEventListener('submit', function(
     })
     .then(response => {
         if (!response.ok) throw new Error('Form submission failed');
+        
+        // Success state - add tick mark and change color temporarily
+        subscribeText.innerHTML = 'Subscribed ✓';
+        subscribeText.style.color = '#3aff9e';
+        
+        // Clear the input
+        emailInput.value = '';
+        
+        // Reset after 3 seconds
+        setTimeout(() => {
+            subscribeText.textContent = 'Subscribe';
+            subscribeText.style.color = ''; // Reverts to original color
+        }, 3000);
     })
-    .catch(error => console.error('Error:', error));
+    .catch(error => {
+        console.error('Error:', error);
+        subscribeText.textContent = 'Try Again';
+        subscribeText.style.color = '#ff6b6b'; // Red for error
+        setTimeout(() => {
+            subscribeText.textContent = 'Subscribe';
+            subscribeText.style.color = ''; // Reverts to original color
+        }, 2000);
+    });
 });
 
-
-// Add this to your existing JavaScript
+// Keep your existing click handler
 document.querySelector('.subscribe-text')?.addEventListener('click', function() {
     document.querySelector('.newsletter-form')?.submit();
-});  
-
+});
 
 // Initialize
 window.addEventListener('scroll', () => {
