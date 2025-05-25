@@ -13,17 +13,21 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 // Newsletter form submission
-// Newsletter form submission - UPDATED BULLETPROOF VERSION
-document.querySelector('.newsletter-form')?.addEventListener('submit', async function(e) {
-    e.preventDefault();
-    await handleFormSubmission(this);
+// Universal form handler (works for dynamically loaded content)
+document.addEventListener('submit', async function(e) {
+    if (e.target.classList.contains('newsletter-form')) {
+        e.preventDefault();
+        await handleFormSubmission(e.target);
+    }
 });
 
-// Click handler for the subscribe text - UPDATED
-document.querySelector('.subscribe-text')?.addEventListener('click', async function(e) {
-    e.preventDefault();
-    const form = this.closest('form');
-    await handleFormSubmission(form);
+// Universal click handler for subscribe text
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('subscribe-text')) {
+        e.preventDefault();
+        const form = e.target.closest('.newsletter-form');
+        if (form) form.dispatchEvent(new Event('submit'));
+    }
 });
 
 async function handleFormSubmission(form) {
@@ -33,37 +37,35 @@ async function handleFormSubmission(form) {
     
     if (!email) return;
     
-    // Visual feedback
+    // Save original state
     const originalText = subscribeText.textContent;
+    const originalColor = subscribeText.style.color;
+    
+    // Visual feedback
     subscribeText.textContent = 'Sending...';
     subscribeText.style.opacity = '0.7';
     
     try {
-        // Create a new FormData object
         const formData = new FormData(form);
-        
-        // Add any additional fields if needed
-        formData.append('_gotcha', ''); // Helps prevent spam
+        formData.append('_gotcha', ''); // Anti-spam field
         
         const response = await fetch(form.action, {
             method: 'POST',
             body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
+            headers: { 'Accept': 'application/json' }
         });
         
         if (!response.ok) throw new Error('Submission failed');
         
         // Success feedback
-        subscribeText.innerHTML = '✓ Done!';
+        subscribeText.innerHTML = '✓ Subscribed!';
         subscribeText.style.color = '#3aff9e';
         emailInput.value = '';
         
         // Reset after 2 seconds
         setTimeout(() => {
             subscribeText.textContent = originalText;
-            subscribeText.style.color = '';
+            subscribeText.style.color = originalColor;
             subscribeText.style.opacity = '1';
         }, 2000);
         
@@ -74,7 +76,7 @@ async function handleFormSubmission(form) {
         
         setTimeout(() => {
             subscribeText.textContent = originalText;
-            subscribeText.style.color = '';
+            subscribeText.style.color = originalColor;
             subscribeText.style.opacity = '1';
         }, 2000);
     }
