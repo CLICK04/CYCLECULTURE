@@ -90,6 +90,13 @@ document.querySelector('.newsletter-form')?.addEventListener('submit', function(
     .catch(error => console.error('Error:', error));
 });
 
+
+// Add this to your existing JavaScript
+document.querySelector('.subscribe-text')?.addEventListener('click', function() {
+    document.querySelector('.newsletter-form')?.submit();
+});  
+
+
 // Initialize
 window.addEventListener('scroll', () => {
     highlightMenu();
