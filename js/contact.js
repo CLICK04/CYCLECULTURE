@@ -13,33 +13,69 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 // Newsletter form submission
-// Newsletter form submission
-document.querySelector('.newsletter-form')?.addEventListener('submit', function(e) {
+// Newsletter form submission - UPDATED BULLETPROOF VERSION
+document.querySelector('.newsletter-form')?.addEventListener('submit', async function(e) {
     e.preventDefault();
-    const form = this;
+    await handleFormSubmission(this);
+});
+
+// Click handler for the subscribe text - UPDATED
+document.querySelector('.subscribe-text')?.addEventListener('click', async function(e) {
+    e.preventDefault();
+    const form = this.closest('form');
+    await handleFormSubmission(form);
+});
+
+async function handleFormSubmission(form) {
     const emailInput = form.querySelector('input[type="email"]');
-    const email = emailInput.value;
+    const subscribeText = form.querySelector('.subscribe-text');
+    const email = emailInput.value.trim();
     
     if (!email) return;
     
-    alert(`Thank you for subscribing with ${email}! We'll keep you updated.`);
-    emailInput.value = '';
+    // Visual feedback
+    const originalText = subscribeText.textContent;
+    subscribeText.textContent = 'Sending...';
+    subscribeText.style.opacity = '0.7';
     
-    fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: {
-            'Accept': 'application/json'
-        }
-    })
-    .then(response => {
-        if (!response.ok) throw new Error('Form submission failed');
-    })
-    .catch(error => console.error('Error:', error));
-});
-
-
-// Add this to your existing JavaScript
-document.querySelector('.subscribe-text')?.addEventListener('click', function() {
-    document.querySelector('.newsletter-form')?.submit();
-});  
+    try {
+        // Create a new FormData object
+        const formData = new FormData(form);
+        
+        // Add any additional fields if needed
+        formData.append('_gotcha', ''); // Helps prevent spam
+        
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        
+        if (!response.ok) throw new Error('Submission failed');
+        
+        // Success feedback
+        subscribeText.innerHTML = '✓ Done!';
+        subscribeText.style.color = '#3aff9e';
+        emailInput.value = '';
+        
+        // Reset after 2 seconds
+        setTimeout(() => {
+            subscribeText.textContent = originalText;
+            subscribeText.style.color = '';
+            subscribeText.style.opacity = '1';
+        }, 2000);
+        
+    } catch (error) {
+        console.error('Error:', error);
+        subscribeText.textContent = 'Try Again';
+        subscribeText.style.color = '#ff6b6b';
+        
+        setTimeout(() => {
+            subscribeText.textContent = originalText;
+            subscribeText.style.color = '';
+            subscribeText.style.opacity = '1';
+        }, 2000);
+    }
+}
