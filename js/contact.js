@@ -13,22 +13,34 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 // Newsletter form submission
-// Universal form handler (works for dynamically loaded content)
-document.addEventListener('submit', async function(e) {
-    if (e.target.classList.contains('newsletter-form')) {
-        e.preventDefault();
-        await handleFormSubmission(e.target);
-    }
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initializeNewsletterForms();
 });
 
-// Universal click handler for subscribe text
-document.addEventListener('click', function(e) {
-    if (e.target.classList.contains('subscribe-text')) {
-        e.preventDefault();
-        const form = e.target.closest('.newsletter-form');
-        if (form) form.dispatchEvent(new Event('submit'));
-    }
-});
+// Also initialize when new content loads (for SPA/AJAX)
+if (typeof Turbo !== 'undefined') {
+    document.addEventListener('turbo:load', initializeNewsletterForms);
+}
+
+function initializeNewsletterForms() {
+    // Initialize all existing newsletter forms
+    document.querySelectorAll('.newsletter-form').forEach(form => {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            await handleFormSubmission(this);
+        });
+    });
+
+    // Initialize all subscribe text clicks
+    document.querySelectorAll('.subscribe-text').forEach(span => {
+        span.addEventListener('click', async function(e) {
+            e.preventDefault();
+            const form = this.closest('.newsletter-form');
+            if (form) await handleFormSubmission(form);
+        });
+    });
+}
 
 async function handleFormSubmission(form) {
     const emailInput = form.querySelector('input[type="email"]');
@@ -37,17 +49,16 @@ async function handleFormSubmission(form) {
     
     if (!email) return;
     
-    // Save original state
-    const originalText = subscribeText.textContent;
-    const originalColor = subscribeText.style.color;
-    
     // Visual feedback
+    const originalText = subscribeText.textContent;
+    const originalColor = getComputedStyle(subscribeText).color;
     subscribeText.textContent = 'Sending...';
     subscribeText.style.opacity = '0.7';
+    subscribeText.style.pointerEvents = 'none';
     
     try {
         const formData = new FormData(form);
-        formData.append('_gotcha', ''); // Anti-spam field
+        formData.append('_gotcha', '');
         
         const response = await fetch(form.action, {
             method: 'POST',
@@ -67,6 +78,7 @@ async function handleFormSubmission(form) {
             subscribeText.textContent = originalText;
             subscribeText.style.color = originalColor;
             subscribeText.style.opacity = '1';
+            subscribeText.style.pointerEvents = '';
         }, 2000);
         
     } catch (error) {
@@ -78,6 +90,7 @@ async function handleFormSubmission(form) {
             subscribeText.textContent = originalText;
             subscribeText.style.color = originalColor;
             subscribeText.style.opacity = '1';
+            subscribeText.style.pointerEvents = '';
         }, 2000);
     }
 }
