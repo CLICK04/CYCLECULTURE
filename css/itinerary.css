@@ -1,0 +1,540 @@
+        /* ===== Base Styles ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Glacial Indifference', sans-serif;
+            color: rgb(190, 190, 190);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-weight: 400;
+        }
+
+        /* Remove all bold styling */
+        strong, b {
+            font-weight: 400;
+        }
+
+        /* ===== Navigation ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 5%;
+            z-index: 1000;
+            transition: all 0.4s ease;
+            background-color: transparent !important;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            position: relative;
+            font-weight: 400;
+        }
+
+        .nav-links a.active {
+            color: #3aff9e;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ===== Full Page Sections ===== */
+        .fullpage-section {
+            position: relative;
+            min-height: 100vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .section-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .section-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 0;
+        }
+
+        .section-content {
+            position: absolute;
+            bottom: 15%;
+            left: 0;
+            width: 100%;
+            padding: 0 10%;
+            z-index: 1;
+        }
+
+        /* Special styles for itinerary section */
+        #itinerary .section-content {
+            bottom: 15%;
+            max-height: 70vh;
+            overflow-y: auto;
+            padding-right: 5%;
+        }
+
+        #itinerary .section-content::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        #itinerary .section-content::-webkit-scrollbar-thumb {
+            background-color: #3aff9e;
+        }
+
+        /* Special styles for terms section */
+        #terms .section-content {
+            bottom: 15%;
+            max-height: 70vh;
+            overflow-y: auto;
+            padding-right: 5%;
+        }
+
+        #terms .section-content::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        #terms .section-content::-webkit-scrollbar-thumb {
+            background-color: #3aff9e;
+        }
+
+        /* City Selector */
+        .city-selector {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .city-btn {
+            background: transparent;
+            border: none;
+            color: white;
+            font-family: inherit;
+            font-size: 0.9rem;
+            cursor: pointer;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .city-btn.active {
+            color: #3aff9e;
+            border-bottom: 1px solid #3aff9e;
+        }
+
+        /* Experience Content */
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: white;
+            text-transform: normal;
+            font-weight: 400;
+        }
+
+        .section-tagline {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: white;
+            font-weight: 400;
+        }
+
+        .card-desc {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.6;
+            max-width: 800px;
+            color: white;
+        }
+
+        .card-cta {
+            color: #3aff9e;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+            font-weight: 400;
+        }
+
+        .card-cta:hover {
+            color: white;
+        }
+
+        /* Info Grid - Changed to horizontal layout */
+        .info-horizontal {
+            display: flex;
+            gap: 3rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .info-item h3 {
+            color: #3aff9e;
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+
+        .info-item p {
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        /* Timeline - Updated to accordion style */
+        .timeline-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1.5rem;
+        }
+
+        .timeline-header {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .timeline-toggle {
+            color: #3aff9e;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            transition: transform 0.3s;
+        }
+
+        .timeline-time {
+            color: #3aff9e;
+            font-size: 0.9rem;
+            margin-right: 1rem;
+        }
+
+        .timeline-title {
+            color: white;
+            font-weight: 400;
+            font-size: 1.1rem;
+        }
+
+        .timeline-content {
+            display: none;
+            padding: 1rem 0 0 2.5rem;
+        }
+
+        .timeline-content p {
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        /* Checklist */
+        .checklist {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .checklist li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .checklist i {
+            color: #3aff9e;
+            margin-right: 1rem;
+            font-size: 0.9rem;
+            margin-top: 0.2rem;
+        }
+
+        /* Terms & Conditions */
+        .terms-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1.5rem;
+        }
+
+        .terms-header {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .terms-toggle {
+            color: #3aff9e;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            transition: transform 0.3s;
+        }
+
+        .terms-header h3 {
+            color: white;
+            font-weight: 400;
+            font-size: 1.1rem;
+        }
+
+        .terms-content {
+            display: none;
+            padding: 1rem 0 0 2.5rem;
+        }
+
+        .terms-content p {
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        /* CTA Button */
+        .section-cta {
+            display: inline-block;
+            color: #3aff9e;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            transition: color 0.3s;
+        }
+
+        .section-cta i {
+            margin-left: 0.5rem;
+            transition: transform 0.3s;
+            
+        }
+
+        .section-cta:hover {
+            color: white;
+        }
+
+        .section-cta:hover i {
+            transform: translateX(5px);
+        }
+
+
+
+
+
+
+
+        /* ===== Responsive Adjustments ===== */
+@media (max-width: 1400px) {
+  .section-content {
+    padding: 0 8%;
+  }
+  h1 {
+    font-size: 3.2rem;
+  }
+  .info-horizontal {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav-links {
+    gap: 1.5rem;
+  }
+  h1 {
+    font-size: 2.8rem;
+  }
+  .section-tagline {
+    font-size: 1.1rem;
+  }
+  .card-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-links {
+    gap: 1rem;
+  }
+  .section-content {
+    padding: 0 7%;
+  }
+  #itinerary .section-content,
+  #terms .section-content {
+    padding-right: 7%;
+  }
+  h1 {
+    font-size: 2.4rem;
+  }
+  .card-title {
+    font-size: 1.4rem;
+  }
+  .city-selector {
+    gap: 1.2rem;
+  }
+  .info-horizontal {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile Navigation */
+  .nav-links {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    transition: left 0.4s ease;
+  }
+  .nav-links.active {
+    left: 0;
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  /* Content Adjustments */
+  .section-content {
+    padding: 0 5%;
+    bottom: 10%;
+  }
+  #itinerary .section-content,
+  #terms .section-content {
+    max-height: 65vh;
+    padding-right: 5%;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .section-tagline {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .card-title {
+    font-size: 1.3rem;
+  }
+  .card-desc {
+    font-size: 0.95rem;
+  }
+  .city-selector {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .info-horizontal {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .timeline-title,
+  .terms-header h3 {
+    font-size: 1rem;
+  }
+  .timeline-content,
+  .terms-content {
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  nav {
+    padding: 1rem 5%;
+  }
+  .logo img {
+    height: 30px;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  .section-tagline {
+    font-size: 0.9rem;
+  }
+  .card-title {
+    font-size: 1.2rem;
+  }
+  .card-desc {
+    font-size: 0.9rem;
+  }
+  .card-cta,
+  .section-cta {
+    font-size: 0.8rem;
+  }
+  .city-btn {
+    font-size: 0.8rem;
+  }
+  .info-item h3,
+  .info-item p {
+    font-size: 0.8rem;
+  }
+  .timeline-time {
+    font-size: 0.8rem;
+  }
+  .checklist i {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  .section-content {
+    bottom: 5%;
+  }
+  #itinerary .section-content,
+  #terms .section-content {
+    max-height: 60vh;
+  }
+  .section-tagline {
+    margin-bottom: 1.2rem;
+  }
+  .city-selector {
+    gap: 0.8rem;
+  }
+  .timeline-content,
+  .terms-content {
+    padding-left: 1.5rem;
+  }
+}
