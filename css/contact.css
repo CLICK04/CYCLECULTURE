@@ -388,3 +388,165 @@ h2 {
     gap: 1rem;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Creative WhatsApp Button ===== */
+
+.wa-creative-btn {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 10px 10px;
+
+    background: rgba(15, 15, 15, 0.92);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 100px;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.25),
+        inset 0 1px 0 rgba(255,255,255,0.04);
+
+    z-index: 9999;
+
+    transition: all 0.35s ease;
+}
+
+/* Hover Effect */
+
+.wa-creative-btn:hover {
+    transform: translateY(-4px) scale(1.02);
+
+    box-shadow:
+        0 18px 50px rgba(0,0,0,0.35),
+        0 0 30px rgba(37,211,102,0.18);
+}
+
+/* Icon Circle */
+
+.wa-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #25D366,
+            #128C7E
+        );
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* Glow Animation */
+
+.wa-icon::before {
+    content: "";
+
+    position: absolute;
+
+    width: 120%;
+    height: 120%;
+
+    background: rgba(255,255,255,0.15);
+
+    transform: rotate(45deg) translateX(-120%);
+
+    transition: 0.6s ease;
+}
+
+.wa-creative-btn:hover .wa-icon::before {
+    transform: rotate(45deg) translateX(120%);
+}
+
+/* SVG */
+
+.wa-icon svg {
+    width: 24px;
+    height: 24px;
+
+    color: white;
+
+    z-index: 2;
+}
+
+/* Text */
+
+.wa-text {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.1;
+}
+
+.wa-text span {
+    color: white;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    letter-spacing: -0.3px;
+
+    font-family: Arial, sans-serif;
+}
+
+.wa-text small {
+    color: rgba(255,255,255,0.55);
+
+    font-size: 11px;
+
+    font-family: Arial, sans-serif;
+
+    margin-top: 4px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .wa-creative-btn {
+        right: 24px;
+        bottom: 24px;
+
+        padding: 10px 12px;
+    }
+
+    .wa-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .wa-text span {
+        font-size: 14px;
+    }
+
+    .wa-text small {
+        font-size: 10px;
+    }
+
+}
