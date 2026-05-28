@@ -498,7 +498,6 @@ h2 {
 
 
 
-
 .whatsapp-float {
     position: fixed;
     width: 60px;
@@ -518,8 +517,7 @@ h2 {
 
 .whatsapp-float img:hover {
     transform: scale(1.1);
-}  
-
+}
 
 @media (max-width: 768px) {
 
@@ -530,7 +528,7 @@ h2 {
         right: 15px;
     }
 
-} 
+}
 
 
 
