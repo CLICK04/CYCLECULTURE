@@ -583,7 +583,7 @@ h1 {
 /* Mobile */
 @media (max-width: 768px) {
     .wa-creative-btn {
-        left: 90%;
+        left: 80%;
         bottom: 24px;
     }
 
