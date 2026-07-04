@@ -112,28 +112,35 @@ nav {
     z-index: 1;
 }
 
-/* Special styles for itinerary section */
+/* ============================================================
+   ITINERARY – FULLY VISIBLE, NO INTERNAL SCROLL
+   ============================================================ */
+#itinerary {
+    overflow-y: visible; /* allows the section to grow naturally */
+}
+
 #itinerary .section-content {
-    bottom: 15%;
-    max-height: 70vh;
-    overflow-y: auto;
-    padding-right: 5%;
+    position: relative;    /* removes absolute positioning */
+    top: auto;
+    bottom: auto;
+    max-height: none;      /* removes the 70vh limit */
+    overflow-y: visible;   /* removes the internal scrollbar */
+    padding: 15% 10% 10% 10%;
+    width: 100%;
 }
 
-#itinerary .section-content::-webkit-scrollbar {
-    width: 5px;
-}
-
-#itinerary .section-content::-webkit-scrollbar-thumb {
-    background-color: #3aff9e;
-}
-
-/* Special styles for terms section */
+/* ============================================================
+   TERMS – KEPT AS ACCORDION WITH INTERNAL SCROLL
+   ============================================================ */
 #terms .section-content {
+    position: absolute;
     bottom: 15%;
+    left: 0;
+    width: 100%;
+    padding: 0 10% 0 10%;
     max-height: 70vh;
     overflow-y: auto;
-    padding-right: 5%;
+    z-index: 1;
 }
 
 #terms .section-content::-webkit-scrollbar {
@@ -248,12 +255,12 @@ h1 {
 .timeline-header {
     display: flex;
     align-items: center;
-    cursor: default;          /* 👈 no pointer cursor */
+    cursor: default;
 }
 
 /* Hide the +/- toggle completely */
 .timeline-toggle {
-    display: none;            /* 👈 plus/minus button hidden */
+    display: none;
 }
 
 .timeline-time {
@@ -271,7 +278,7 @@ h1 {
 
 /* Content is always visible – no display toggle */
 .timeline-content {
-    display: block !important;  /* 👈 always visible */
+    display: block !important;
     padding: 1rem 0 0 2.5rem;
 }
 
@@ -281,7 +288,7 @@ h1 {
 }
 
 /* ============================================================
-   TERMS – keep accordion (untouched)
+   TERMS – ACCORDION STYLES (kept as is)
    ============================================================ */
 .terms-item {
     margin-bottom: 1.5rem;
@@ -395,7 +402,7 @@ h1 {
     .section-content {
         padding: 0 7%;
     }
-    #itinerary .section-content,
+    /* Only Terms keeps the right padding adjustment */
     #terms .section-content {
         padding-right: 7%;
     }
@@ -440,11 +447,20 @@ h1 {
         padding: 0 5%;
         bottom: 10%;
     }
-    #itinerary .section-content,
+
+    /* Itinerary – no scroll, just padding */
+    #itinerary .section-content {
+        padding: 20% 5% 10% 5%;
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    /* Terms – still has scroll */
     #terms .section-content {
         max-height: 65vh;
         padding-right: 5%;
     }
+
     h1 {
         font-size: 2rem;
     }
@@ -521,10 +537,17 @@ h1 {
     .section-content {
         bottom: 5%;
     }
-    #itinerary .section-content,
+
+    /* Itinerary – still no scroll */
+    #itinerary .section-content {
+        padding: 20% 5% 10% 5%;
+    }
+
+    /* Terms – still has scroll */
     #terms .section-content {
         max-height: 60vh;
     }
+
     .section-tagline {
         margin-bottom: 1.2rem;
     }
